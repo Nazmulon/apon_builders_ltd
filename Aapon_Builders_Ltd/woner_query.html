@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="resources/img/logo.png" type="image/png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - Apon Builders LTD</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap" rel="stylesheet">
+    
+    <!-- fontwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- costom css -->
+    <link rel="stylesheet" href="resources/css/style.css">
+
+
+</head>
+
+<body>
+    <!-- header top -->
+    <div class="container-fluid" >
+        <div class="row head">
+            <div class="col-md-4 trow" >
+                <a href="mailto:aponbuilders@gmail.com"><img src="resources/img/top/email.jpg" alt=""> aponbuilders@gmail.com</a> &nbsp;
+                <span>
+                    <img class="img-fluid pon" src="resources/img/top/phone.jpg" alt=""> 01971-777777
+                </span>
+                
+            </div>
+            <div class="col-md-4" style="text-align: center;margin-top: -2px; padding-bottom: 3px;">
+                <a href="http://"> <img class="img-fluid" src="resources/img/social_icon/facebook.jpg" alt=""> </a>
+                <a href="http://"> <img class="img-fluid" src="resources/img/social_icon/camera.jpg" alt=""> </a>
+                <a href="http://"> <img class="img-fluid" src="resources/img/social_icon/instagram.jpg" alt=""></a>
+                <a href="http://"> <img class="img-fluid" src="resources/img/social_icon/twitter.jpg" alt=""></a>
+            </div>
+            <div class="col-md-4 log">
+                <a data-toggle="modal" data-target="#logModal" href="#" style="color: rgb(68, 129, 6);">Login</a> |
+                <a data-toggle="modal" data-target="#regModal" href="#" style="color: rgb(68, 129, 6);">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <!-- end header top -->
+    <!-- login form -->
+    <div class="modal" id="logModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Log In</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <label class="sr-only" for="usrname">Username</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        
+                        
+                        <label class="sr-only" for="Password">Name</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-success btn-lg" value="Log In">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end login form -->
+    <!-- sign in form -->
+    <div class="modal" id="regModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title"> Sign Up</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="" method="POST">
+
+                        <label class="sr-only" for="fullname">Full Name</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Full Name" aria-label="fullname" aria-describedby="basic-addon2">
+                        </div>
+
+                        <label class="sr-only" for="usrname">Username</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="User Name" aria-label="usrname" aria-describedby="basic-addon2">
+                        </div>
+
+                        <label class="sr-only" for="email">Email</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fas fa-envelope-square"></i></span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon2">
+                        </div>
+
+                        <label class="sr-only" for="phone">Phone</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fas fa-phone-alt"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Number" aria-label="phone" aria-describedby="basic-addon2">
+                        </div>
+
+
+                        <label class="sr-only" for="password">Password</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="password" aria-describedby="basic-addon2">
+                        </div>
+                        
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-success btn-lg" value="Sign Up">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end sign form -->
+
+
+
+    <!-- landwoners query -->
+    <div class="modal" id="landModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Query For Landowners</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h4>LandOwner Information</h4>
+                    <form action="" method="POST">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="sr-only" for="fullname">Full Name</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Full Name" aria-label="fullname" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="sr-only" for="email">Email</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fas fa-envelope-square"></i></span>
+                                    </div>
+                                    <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="sr-only" for="phone">Phone</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fas fa-phone-alt"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Number" aria-label="phone" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="sr-only" for="faxnumber">Fax Number</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fas fa-fax"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Fax Number" aria-label="faxnumber" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="sr-only" for="mobile">Mobile Number</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fas fa-phone-alt"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Mobile Number" aria-label="phone" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="sr-only" for="address">Adderss</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fas fa-map-marker-alt"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Address" aria-label="address" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Land Information</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select name="city" id="" class="form-control">
+                                    <option value=""> City</option>
+                                    <option value=""> City 1</option>
+                                    <option value=""> City 2</option>
+                                    <option value=""> City 3</option>
+                                    <option value=""> City 4</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="sr-only" for="plot">Plot Dimension frontage along road</label>
+                                <div class="input-group mb-3">
+                                    
+                                    <input type="text" class="form-control" placeholder="Plot Dimension frontage along road" aria-label="plot" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="sr-only" for="phone">Phone</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fas fa-phone-alt"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Phone Number" aria-label="phone" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="sr-only" for="fullname">Size/Area of the plot</label>
+                                <div class="input-group mb-3">
+                                    
+                                    <input type="text" class="form-control" placeholder="Size/Area of the plot" aria-label="area" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="sr-only" for="address">Adderss</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fas fa-map-marker-alt"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Address" aria-label="address" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="sr-only" for="location">Location</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fas fa-map-marker-alt"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Location" aria-label="location" aria-describedby="basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="features" id="massege" cols="90" rows="3" placeholder="Any Special Features (Corner Plot, Lake, Park etc.)"></textarea>
+
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="massege" id="massege" cols="90" rows="3" placeholder="massege"></textarea>
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success btn-lg" >Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- landwoner query -->
+    <!-- navbar start -->
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html"><img src="resources/img/logo.png"> </a>
+            
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+                <ul class="navbar-nav ml-auto topnav" >
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> <span class="sr-only">(current)</span> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="properties.html">Properties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agents.html">Our Agents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+
+    <!-- nevber end -->
+
+    <!-- main content area -->
+    <div class="container">
+        <!-- progress bar -->
+           <!-- buyer's query -->
+<!-- landwoners query -->
+
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Query For Landowners</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h4>LandOwner Information</h4>
+                <form action="" method="POST">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="sr-only" for="fullname">Full Name</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon4"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Full Name" aria-label="fullname" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="sr-only" for="email">Email</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon4"><i class="fas fa-envelope-square"></i></span>
+                                </div>
+                                <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="sr-only" for="phone">Phone</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon4"><i class="fas fa-phone-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Number" aria-label="phone" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="sr-only" for="faxnumber">Fax Number</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon4"><i class="fas fa-fax"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Fax Number" aria-label="faxnumber" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="sr-only" for="mobile">Mobile Number</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon4"><i class="fas fa-phone-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Mobile Number" aria-label="phone" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="sr-only" for="address">Adderss</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon4"><i class="fas fa-map-marker-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Address" aria-label="address" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Land Information</h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <select name="city" id="" class="form-control">
+                                <option value=""> City</option>
+                                <option value=""> City 1</option>
+                                <option value=""> City 2</option>
+                                <option value=""> City 3</option>
+                                <option value=""> City 4</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="sr-only" for="plot">Plot Dimension frontage along road</label>
+                            <div class="input-group mb-3">
+                                
+                                <input type="text" class="form-control" placeholder="Plot Dimension frontage along road" aria-label="plot" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="sr-only" for="phone">Phone</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon4"><i class="fas fa-phone-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Phone Number" aria-label="phone" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="sr-only" for="fullname">Size/Area of the plot</label>
+                            <div class="input-group mb-3">
+                                
+                                <input type="text" class="form-control" placeholder="Size/Area of the plot" aria-label="area" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="sr-only" for="address">Adderss</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon4"><i class="fas fa-map-marker-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Address" aria-label="address" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="sr-only" for="location">Location</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon4"><i class="fas fa-map-marker-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Location" aria-label="location" aria-describedby="basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea class="form-control" name="features" id="massege" cols="90" rows="3" placeholder="Any Special Features (Corner Plot, Lake, Park etc.)"></textarea>
+
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea class="form-control" name="massege" id="massege" cols="90" rows="3" placeholder="massege"></textarea>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-success btn-lg" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+<!-- landwoner query -->
+
+    <!-- end buyer's query -->
+    </div>
+    <!-- end progress bar -->
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Apon Builders LTD</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ea at ab itaque, nesciunt qui natus exercitationem fugit tenetur doloremque!</p>
+            </div>
+            <div class="col">
+                <h4>Contact Us</h4>
+                <p>
+                    <img src="resources/img/map/location.jpg" alt="">&nbsp; 40 New Design Street, Dhaka
+                </p>
+                <p>
+                    <img src="resources/img/map/msg.jpg" alt="">&nbsp; Demo@gmail.com
+                </p>
+                <p>
+                    <img src="resources/img/map/pho.jpg" alt="">&nbsp; +880192-9524168
+                </p>
+            </div>
+            <div class="col">
+                <h4 class="use">Usefull Links</h4>
+                <ul class="foot">
+                    <li><a href="http://" style="color: white;">Home</a></li>
+                    <li><a href="http://" style="color: white;">Properties</a></li>
+                    <li><a href="http://" style="color: white;">Our Agents</a></li>
+                    <li><a href="http://" style="color: white;">Abouts US</a></li>
+                    <li><a href="http://" style="color: white;">Contact US</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Subscribe</h4>
+                <form action="" method="POST">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="subscribe" placeholder="Your Email">
+                        <input class=" btn-success" type="submit" name="submit" value="send" style="padding-bottom: 5px; padding-top: 6px;">
+                    </div>    
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <h6>&copy; Copyright 2019 All rights reserved - Design By Infobizsoft</h6>
+    </div>
+</div>
+
+</div>
+<!-- end featured properties -->
+
+
+
+
+
+
+
+
+<!-- script link -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- carosel -->
+
+<script type="text/javascript"> 
+    <!-- JavaScript to slide images horizontally-->
+    $(window).load(function() { 
+        $(".carousel .item").each(function() { 
+            var i = $(this).next(); 
+            i.length || (i = $(this).siblings(":first")), 
+            i.children(":first-child").clone().appendTo($(this)); 
+            
+            for (var n = 0; n < 4; n++)(i = i.next()).length ||  
+              (i = $(this).siblings(":first")),  
+          i.children(":first-child").clone().appendTo($(this)) 
+      }) 
+    }); 
+</script> 
+<script>
+   var slider = $("#calculatorSlider");
+   var developerBtn = $("#developerBtn");
+   var corporateBtn = $("#corporateBtn");
+   var privateBtn = $("#privateBtn");
+   var reseller = $("#resellerEarnings");
+   var client = $("#clientPrice");
+var percentageBonus = 30; // = 30%
+var license = {
+    corpo: {
+        active: true,
+        price: 319,
+    },
+    dev: {
+        active: false,
+        price: 149,
+    },
+    priv: {
+        active: false,
+        price: 79,
+    }
+}
+
+function calculate(price, value) {
+    client.text((Math.round((price - (value / 100 * price)))) + '$');
+    reseller.text((Math.round(((percentageBonus - value) / 100 * price))) + '$')
+}
+
+function reset(price) {
+    slider.val(0);
+    client.text(price + '$');
+    reseller.text((Math.round((percentageBonus / 100 * price))) + '$');
+}
+developerBtn.on('click', function(e) {
+    license.dev.active = true;
+    license.corpo.active = false;
+    license.priv.active = false;
+    reset(license.dev.price)
+});
+privateBtn.on('click', function(e) {
+    license.dev.active = false;
+    license.corpo.active = false;
+    license.priv.active = true;
+    reset(license.priv.price);
+});
+corporateBtn.on('click', function(e) {
+    license.dev.active = false;
+    license.corpo.active = true;
+    license.priv.active = false;
+    reset(license.corpo.price);
+});
+slider.on("input change", function(e) {
+    if (license.priv.active) {
+        calculate(license.priv.price, $(this).val());
+    } else if (license.corpo.active) {
+        calculate(license.corpo.price, $(this).val());
+    } else if (license.dev.active) {
+        calculate(license.dev.price, $(this).val());
+    }
+})
+</script>
+</body>
+
+</html>

@@ -176,13 +176,13 @@
                     <a class="nav-link" href="{{'/properties'}}">Properties</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="agents.html">Our Agents</a>
+                    <a class="nav-link" href="{{'/agents'}}">Our Agents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about_us.html">About Us</a>
+                    <a class="nav-link" href="{{'/about'}}">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact_us.html">Contact Us</a>
+                    <a class="nav-link" href="{{'/contact'}}">Contact Us</a>
                 </li>
             </ul>
         </div>

@@ -3,7 +3,7 @@
 
 <head>
     <title>Home - Apon Builders LTD</title>
-    <link rel="icon" href="resources/img/logo.png" type="image/png">
+    <link rel="icon" href="{{asset('/')}}assets/frontend/img/logo.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,7 +15,7 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- costom css -->
-    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="{{asset('/')}}assets/frontend/css/style.css">
 
 
 </head>
@@ -25,17 +25,17 @@
 <div class="container-fluid" >
     <div class="row head">
         <div class="col-md-4 trow" >
-            <a href="mailto:aponbuilders@gmail.com"><img src="resources/img/top/email.jpg" alt=""> aponbuilders@gmail.com</a> &nbsp;
+            <a href="mailto:aponbuilders@gmail.com"><img src="{{asset('/')}}assets/frontend/img/top/email.jpg" alt=""> aponbuilders@gmail.com</a> &nbsp;
             <span>
-                    <img class="img-fluid pon" src="resources/img/top/phone.jpg" alt=""> 01971-777777
+                    <img class="img-fluid pon" src="{{asset('/')}}assets/frontend/img/top/phone.jpg" alt=""> 01971-777777
                 </span>
 
         </div>
         <div class="col-md-4" style="text-align: center;margin-top: -2px; padding-bottom: 3px;">
-            <a href="http://"> <img class="img-fluid" src="resources/img/social_icon/facebook.jpg" alt=""> </a>
-            <a href="http://"> <img class="img-fluid" src="resources/img/social_icon/camera.jpg" alt=""> </a>
-            <a href="http://"> <img class="img-fluid" src="resources/img/social_icon/instagram.jpg" alt=""></a>
-            <a href="http://"> <img class="img-fluid" src="resources/img/social_icon/twitter.jpg" alt=""></a>
+            <a href="http://"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt=""> </a>
+            <a href="http://"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt=""> </a>
+            <a href="http://"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt=""></a>
+            <a href="http://"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt=""></a>
         </div>
         <div class="col-md-4 log">
             <a data-toggle="modal" data-target="#logModal" href="#" style="color: rgb(68, 129, 6);">Login</a> |
@@ -159,7 +159,7 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand" href="index.html"><img src="resources/img/logo.png"> </a>
+        <a class="navbar-brand" href="{{'/'}}"><img src="{{asset('/')}}assets/frontend/img/logo.png"> </a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -170,10 +170,10 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar" >
             <ul class="navbar-nav ml-auto topnav" >
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html"> <span class="sr-only">(current)</span> Home</a>
+                    <a class="nav-link" href="{{'/'}}"> <span class="sr-only">(current)</span> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="properties.html">Properties</a>
+                    <a class="nav-link" href="{{'/properties'}}">Properties</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="agents.html">Our Agents</a>
@@ -197,7 +197,7 @@
     <!-- The slideshow -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="img-fluid" src="resources/img/slider_1.jpg" alt="Los Angeles">
+            <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_1.jpg" alt="Los Angeles">
             <div class="container">
                 <div class="carousel-caption text-center">
                     <h1>Example headline.</h1>
@@ -216,7 +216,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="img-fluid" src="resources/img/slider_2.jpg" alt="Chicago">
+            <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_2.jpg" alt="Chicago">
             <div class="container">
                 <div class="carousel-caption text-center">
                     <h1>Example headline.</h1>
@@ -235,7 +235,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="img-fluid" src="resources/img/slider_3.jpg" alt="New York" >
+            <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_3.jpg" alt="New York" >
             <div class="container">
                 <div class="carousel-caption text-center">
                     <h1>Example headline.</h1>
@@ -254,7 +254,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="img-fluid" src="resources/img/slider_4.jpg" alt="New York" >
+            <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_4.jpg" alt="New York" >
             <div class="container">
                 <div class="carousel-caption text-center">
                     <h1>Example headline.</h1>
@@ -273,7 +273,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="img-fluid" src="resources/img/slider_5.jpg" alt="New York">
+            <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_5.jpg" alt="New York">
             <div class="container">
                 <div class="carousel-caption text-center">
                     <h1>Example headline.</h1>
@@ -408,7 +408,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
                                     <!-- <div class="sale">Sale</div> -->
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
@@ -435,7 +435,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""></a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""></a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -461,7 +461,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""></a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""></a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -491,7 +491,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -517,7 +517,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -543,7 +543,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -590,7 +590,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -616,7 +616,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -642,7 +642,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -672,7 +672,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -698,7 +698,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -724,7 +724,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="resources/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -803,7 +803,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="card mb-2">
-                                        <a href="single_agent.html"><img class="img-fluid" src="resources/img/clent/clent1.jpg" style="width: 100%; height: 250px;"></a>
+                                        <a href="single_agent.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/clent/clent1.jpg" style="width: 100%; height: 250px;"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-2 bg-light">
@@ -818,22 +818,22 @@
                                     </div>
                                     <div class="row asocil">
                                         <a href="">
-                                            <img src="resources/img/social_icon/facebook.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/camera.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/instagram.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/twitter.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card mb-2">
-                                        <a href="single_agent.html"><img class="img-fluid" src="resources/img/clent/clent1.jpg" style="width: 100%; height: 250px;"></a>
+                                        <a href="single_agent.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/clent/clent1.jpg" style="width: 100%; height: 250px;"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-2 bg-light">
@@ -848,16 +848,16 @@
                                     </div>
                                     <div class="row asocil">
                                         <a href="">
-                                            <img src="resources/img/social_icon/facebook.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/camera.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/instagram.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/twitter.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -867,7 +867,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="card mb-2">
-                                        <a href="single_agent.html"><img class="img-fluid" src="resources/img/clent/clent1.jpg" style="width: 100%; height: 250px;"></a>
+                                        <a href="single_agent.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/clent/clent1.jpg" style="width: 100%; height: 250px;"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-2 bg-light">
@@ -882,22 +882,22 @@
                                     </div>
                                     <div class="row asocil">
                                         <a href="">
-                                            <img src="resources/img/social_icon/facebook.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/camera.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/instagram.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/twitter.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card mb-2">
-                                        <a href="single_agent.html"><img class="img-fluid" src="resources/img/clent/clent1.jpg" style="width: 100%; height: 250px;"></a>
+                                        <a href="single_agent.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/clent/clent1.jpg" style="width: 100%; height: 250px;"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-2 bg-light">
@@ -912,16 +912,16 @@
                                     </div>
                                     <div class="row asocil">
                                         <a href="">
-                                            <img src="resources/img/social_icon/facebook.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/camera.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/instagram.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt="">
                                         </a>
                                         <a href="">
-                                            <img src="resources/img/social_icon/twitter.jpg" alt="">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -981,13 +981,13 @@
             <div class="col">
                 <h4>Contact Us</h4>
                 <p>
-                    <img src="resources/img/map/location.jpg" alt="">&nbsp; 40 New Design Street, Dhaka
+                    <img src="{{asset('/')}}assets/frontend/img/map/location.jpg" alt="">&nbsp; 40 New Design Street, Dhaka
                 </p>
                 <p>
-                    <img src="resources/img/map/msg.jpg" alt="">&nbsp; Demo@gmail.com
+                    <img src="{{asset('/')}}assets/frontend/img/map/msg.jpg" alt="">&nbsp; Demo@gmail.com
                 </p>
                 <p>
-                    <img src="resources/img/map/pho.jpg" alt="">&nbsp; +880192-9524168
+                    <img src="{{asset('/')}}assets/frontend/img/map/pho.jpg" alt="">&nbsp; +880192-9524168
                 </p>
             </div>
             <div class="col">
@@ -1020,13 +1020,6 @@
 
 </div>
 <!-- end featured properties -->
-
-
-
-
-
-
-
 
 <!-- script link -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

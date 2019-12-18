@@ -11,21 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/properties', function () {
-    return view('layouts.frontend.properties');
-});
-Route::get('/agents', function () {
-    return view('layouts.frontend.agents');
-});
-Route::get('/about', function () {
-    return view('layouts.frontend.about');
-});
-Route::get('/contact', function () {
-    return view('layouts.frontend.contact');
-});
+Route::get('/', 'indexController@index')->name('index');
+
+Route::get('/properties', 'indexController@properties')->name('properties');
+
+Route::get('/agents', 'indexController@agents')->name('agents');
+
+Route::get('/about', 'indexController@about')->name('about');
+
+Route::get('/contact', 'indexController@contact')->name('contact');
+
+Route::get('/single_properties', 'indexController@single_properties')->name('single_properties');
+
+Route::get('/single_agents', 'indexController@single_agents')->name('single_agents');
+
 
 Auth::routes();
 

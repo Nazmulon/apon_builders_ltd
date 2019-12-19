@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
+//===================================front page controller ====================================
 Route::get('/', 'indexController@index')->name('index');
 
 Route::get('/properties', 'indexController@properties')->name('properties');
@@ -25,8 +27,12 @@ Route::get('/single_properties', 'indexController@single_properties')->name('sin
 
 Route::get('/single_agents', 'indexController@single_agents')->name('single_agents');
 
+//===============================================Dashboard controller======================================
+Route::get('/dashboard', 'DashboardController@index');
 
-Auth::routes();
+//===========================enail_number=================================================================
+Route::resource('email_number','EmailNumberController');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// ===============================Admin Social link=======================================================
+Route::resource('admin_social_link','AdminSocialController');
 

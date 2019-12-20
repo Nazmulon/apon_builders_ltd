@@ -25,17 +25,19 @@
 <div class="container-fluid" >
     <div class="row head">
         <div class="col-md-4 trow" >
-            <a href="mailto:aponbuilders@gmail.com"><img src="{{asset('/')}}assets/frontend/img/top/email.jpg" alt=""> aponbuilders@gmail.com</a> &nbsp;
+            @foreach($emailNumber as $ename)
+            <a href="mailto:aponbuilders@gmail.com"><img src="{{asset('/')}}assets/frontend/img/top/email.jpg" alt=""> {{$ename->a_email}}</a> &nbsp;
             <span>
-                    <img class="img-fluid pon" src="{{asset('/')}}assets/frontend/img/top/phone.jpg" alt=""> 01971-777777
-                </span>
-
+             <img class="img-fluid pon" src="{{asset('/')}}assets/frontend/img/top/phone.jpg" alt=""> {{$ename->a_number}}</span>
+            @endforeach
         </div>
         <div class="col-md-4" style="text-align: center;margin-top: -2px; padding-bottom: 3px;">
-            <a href="http://"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt=""> </a>
-            <a href="http://"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt=""> </a>
-            <a href="http://"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt=""></a>
-            <a href="http://"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt=""></a>
+            @foreach($social as $icon)
+            <a href="{{$icon->facebook}}" target="_blank"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt=""> </a>
+            <a href="{{$icon->instagram}}" target="_blank"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt=""> </a>
+            <a href="{{$icon->pinterest}}" target="_blank"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt=""></a>
+            <a href="{{$icon->twitter}}" target="_blank"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt=""></a>
+            @endforeach
         </div>
         <div class="col-md-4 log">
             <a data-toggle="modal" data-target="#logModal" href="#" style="color: rgb(68, 129, 6);">Login</a> |

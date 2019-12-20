@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\EmailNumber;
+use App\AdminSocial;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,9 @@ class indexController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $emailNumber = EmailNumber::get();
+        $social = AdminSocial::get();
+        return view('index', compact('emailNumber','social'));
     }
 
     public function properties()

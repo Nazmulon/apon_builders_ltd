@@ -36,3 +36,6 @@ Route::resource('email_number','EmailNumberController');
 // ===============================Admin Social link=======================================================
 Route::resource('admin_social_link','AdminSocialController');
 
+// ============================Logo=====================================================================
+
+Route::resource('logo', 'LogoController');

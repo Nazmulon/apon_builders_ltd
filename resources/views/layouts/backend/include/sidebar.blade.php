@@ -102,7 +102,7 @@
                         </ul>
                     </li>
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a href="{{'/logo'}}" class="nav-link">
                             <i class="nav-icon fas fa-chart-pie"></i>
                             <p>Logo</p>
                         </a>

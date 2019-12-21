@@ -39,3 +39,6 @@ Route::resource('admin_social_link','AdminSocialController');
 // ============================Logo=====================================================================
 
 Route::resource('logo', 'LogoController');
+
+// ======================================Sliders========================================================
+Route::resource('slider','SliderController');

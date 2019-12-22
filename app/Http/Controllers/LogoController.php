@@ -48,7 +48,7 @@ class LogoController extends Controller
         $image = $request->file('image');
         $name = str::slug($request->title).'.'.$image->getClientOriginalName();
         $filename = time().'.'.$name;
-        $destinationPath = public_path('/image/logo');
+        $destinationPath = public_path('assets/frontend/img/logo');
         $imagePath = $destinationPath. "/".  $filename;
         $image->move($destinationPath, $filename);
         $logo->image = $filename;
@@ -93,7 +93,7 @@ class LogoController extends Controller
         $image = $request->file('image');
         $name = str::slug($request->title).'.'.$image->getClientOriginalExtension();
         $filename = time().'.'.$name;
-        $destinationPath = public_path('/image/logo');
+        $destinationPath = public_path('assets/frontend/img/logo');
         $imagePath = $destinationPath. "/".  $filename;
         // $filename = $image->getClientOriginalName();
         $image->move($destinationPath, $filename);

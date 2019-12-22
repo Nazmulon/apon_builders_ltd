@@ -16,7 +16,7 @@
 
         </div>
         <div class="col-md-6">
-            <form  action="{{route('logo.store')}}" method="post" enctype="multipart/form-data">
+            <form  action="{{route('slider.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">

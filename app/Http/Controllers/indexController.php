@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\EmailNumber;
 use App\AdminSocial;
+use App\Logo;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,37 +13,56 @@ class indexController extends Controller
     {
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
-        return view('index', compact('emailNumber','social'));
+        $logo = Logo::all();
+        return view('index', compact('emailNumber','social', 'logo'));
     }
 
     public function properties()
     {
-        return view('layouts.frontend.properties');
+        $emailNumber = EmailNumber::get();
+        $social = AdminSocial::get();
+        $logo = Logo::all();
+        return view('layouts.frontend.properties', compact('emailNumber', 'social', 'logo'));
     }
 
     public function agents()
     {
-        return view('layouts.frontend.agents');
+        $emailNumber = EmailNumber::get();
+        $social = AdminSocial::get();
+        $logo = Logo::all();
+        return view('layouts.frontend.agents', compact('emailNumber', 'social', 'logo'));
     }
 
     public function about()
     {
-        return view('layouts.frontend.about');
+        $emailNumber = EmailNumber::get();
+        $social = AdminSocial::get();
+        $logo = Logo::all();
+        return view('layouts.frontend.about', compact('emailNumber', 'social', 'logo'));
     }
 
     public function contact()
     {
-        return view('layouts.frontend.contact');
+        $emailNumber = EmailNumber::get();
+        $social = AdminSocial::get();
+        $logo = Logo::all();
+        return view('layouts.frontend.contact',compact('emailNumber', 'social', 'logo'));
     }
 
     public function single_properties()
     {
-        return view('layouts.frontend.single_properties');
+        $emailNumber = EmailNumber::get();
+        $social = AdminSocial::get();
+        $logo = Logo::all();
+        return view('layouts.frontend.single_properties', compact('emailNumber', 'social', 'logo'));
     }
 
     public function single_agents()
     {
-        return view('layouts.frontend.single_agents');
+        $emailNumber = EmailNumber::get();
+        $social = AdminSocial::get();
+        $logo = Logo::all();
+        return view('layouts.frontend.single_agents', compact('emailNumber', 'social', 'logo'));
 
     }
 }

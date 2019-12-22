@@ -23,7 +23,7 @@
                     <!-- right column -->
                     
                     <div class="col-md-12">
-                    <p><a class="btn btn-primary" href="{{route('logo.create')}}">Add Logo</a></p>
+                    <p><a class="btn btn-primary" href="{{route('slider.create')}}">Add Logo</a></p>
                             <!-- table start -->
                             <table class="table table-bordered text-center">
                                 <thead>
@@ -38,19 +38,19 @@
                             
                                 @foreach($sliders as $slider)
                                   <tr>
-                                   <td><img src="{{ URL::to('/') }}/images/{{ $slider->image }}" class="img-thumbnail" width="75" /></td>
+                                   <td><img src="{{ URL::to('/') }}/assets/frontend/img/slider/{{ $slider->image }}" class="img-thumbnail" width="75" /></td>
                                    <td>{{ $slider->title }}</td>
                                    <td>{{ $slider->description }}</td>
                                    <td>
-                                    <a class="btn btn-info" href="">Edit</a>
-                                    <a class="btn btn-danger" href="">Delete</a>
+                                   <form action="{{ route('slider.destroy',$slider->id) }}" method="POST">
+                                    <a class="btn btn-info" href="{{route('slider.edit', $slider->id)}}">Edit</a>
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
                                    </td>
                                   </tr>
                                  @endforeach
-
-
-                            
-
                                 </tbody>
                             </table>
                             {!! $sliders->links() !!}

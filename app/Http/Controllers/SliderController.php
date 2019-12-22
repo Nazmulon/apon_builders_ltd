@@ -15,7 +15,7 @@ class SliderController extends Controller
     public function index()
     {
         $sliders = Slider::latest()->paginate(5);
-        return view('layouts.backend.slider.index', compact('sliders'))
+        return view('layouts.backend.sliders.index', compact('sliders'))
                 ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -26,7 +26,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return view('layouts.backend.slider.create');
+        return view('layouts.backend.sliders.create');
     }
 
     /**
@@ -38,24 +38,24 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'    =>  'required',
-            'description'     =>  'required',
-            'image'         =>  'required|image|max:2048'
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|max:2048'
         ]);
 
         $image = $request->file('image');
 
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images/slider'), $new_name);
+        $image->move(public_path('assets/frontend/img/slider'), $new_name);
         $form_data = array(
-            'title'       =>   $request->title,
-            'description'        =>   $request->description,
-            'image'            =>   $new_name
+            'title' =>$request->title,
+            'description' =>$request->description,
+            'image' =>$new_name
         );
 
         Slider::create($form_data);
 
-        return redirect('layouts.backend.slider.index')->with('success', 'Data Added successfully.');
+        return redirect()->route('slider.index')->with('success', 'Data Added successfully.');
     }
 
     /**
@@ -79,7 +79,7 @@ class SliderController extends Controller
     public function edit($id)
     {
         $sliders = Slider::findOrFail($id);
-        return view('layouts.backend.slider.edit', compact('sliders'));
+        return view('layouts.backend.sliders.edit', compact('sliders'));
     }
 
     /**
@@ -96,31 +96,31 @@ class SliderController extends Controller
         if($image != '')
         {
             $request->validate([
-                'title'    =>  'required',
-                'description'     =>  'required',
-                'image'         =>  'image|max:2048'
+                'title'=>  'required',
+                'description'=>'required',
+                'image' =>'image|max:2048'
             ]);
 
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images/sliders'), $image_name);
+            $image->move(public_path('assets/frontend/img/slider'), $image_name);
         }
         else
         {
             $request->validate([
-                'title'    =>  'required',
-                'description'     =>  'required'
+                'title' =>'required',
+                'description' =>'required'
             ]);
         }
 
         $form_data = array(
-            'title'       =>   $request->title,
-            'description'        =>   $request->description,
-            'image'            =>   $image_name
+            'title' =>$request->title,
+            'description' =>$request->description,
+            'image' =>$image_name
         );
   
         Slider::whereId($id)->update($form_data);
 
-        return redirect('layouts.backend.slider.index')->with('success', 'Data is successfully updated');
+        return redirect()->route('slider.index')->with('success', 'Data is successfully updated');
     }
 
     /**
@@ -132,8 +132,9 @@ class SliderController extends Controller
     public function destroy($id)
     {
         $sliders = Slider::findOrFail($id);
+         
         $sliders->delete();
 
-        return redirect('layouts.backend.slider.index')->with('success', 'Data is successfully deleted');
+        return redirect()->route('slider.index')->with('success', 'Data is successfully deleted');
     }
 }

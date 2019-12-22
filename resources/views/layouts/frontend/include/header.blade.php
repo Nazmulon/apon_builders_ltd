@@ -48,8 +48,9 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand" href="{{'/'}}"><img src="{{asset('/')}}assets/frontend/img/logo.png"> </a>
-
+        @foreach($logo as $log)
+        <a class="navbar-brand" href="{{'/'}}"><img src="{{asset('/')}}assets/frontend/img/logo/{{$log->image}}"> </a>
+        @endforeach
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

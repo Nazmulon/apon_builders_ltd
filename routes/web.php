@@ -42,3 +42,9 @@ Route::resource('logo', 'LogoController');
 
 // ======================================Sliders========================================================
 Route::resource('slider','SliderController');
+
+// ===============================================Category============================================
+Route::resource('category', 'CategoryController');
+
+// ===========================================Featured Properties=======================================
+Route::resource('featuredproperty', 'FeaturPropertyController');

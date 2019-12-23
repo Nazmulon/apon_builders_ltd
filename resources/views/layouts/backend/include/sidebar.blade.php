@@ -100,13 +100,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{'/category'}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Add Property</p>
+                                    <p>All Category</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{'/featureproperties'}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>All Properties</p>
                                 </a>

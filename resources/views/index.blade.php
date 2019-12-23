@@ -115,12 +115,13 @@
 <div id="demo" class="carousel slide" data-ride="carousel">
     <!-- The slideshow -->
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_1.jpg" alt="Los Angeles">
+        @foreach ($sliders->take(5) as $slider)
+        <div class="carousel-item @if($loop->first) active @endif">
+        <img class="img-fluid" src="{{ URL::to('/') }}/assets/frontend/img/slider/{{ $slider->image }}" alt="Los Angeles">
             <div class="container">
                 <div class="carousel-caption text-center">
-                    <h1>Example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                <h1>{{$slider->title}}</h1>
+                    <p>{{$slider->description}}</p>
                     <div class="row btn1">
                         <div class="col-md-6 ">
                             <a class="btn bg-light btn-outline-success" href="buyer_query.html" role="button" style="color: black; margin-right: 10px; float: right;">Buyer's Query</a>
@@ -133,8 +134,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="carousel-item">
+        </div>  
+        @endforeach
+        
+        {{-- <div class="carousel-item">
             <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_2.jpg" alt="Chicago">
             <div class="container">
                 <div class="carousel-caption text-center">
@@ -210,7 +213,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>

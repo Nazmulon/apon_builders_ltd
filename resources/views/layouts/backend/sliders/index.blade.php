@@ -23,14 +23,14 @@
                     <!-- right column -->
                     
                     <div class="col-md-12">
-                    <p><a class="btn btn-primary" href="{{route('slider.create')}}">Add Logo</a></p>
+                    <p><a class="btn btn-primary" href="{{route('slider.create')}}">Add Sliders</a></p>
                             <!-- table start -->
                             <table class="table table-bordered text-center">
                                 <thead>
                                 <tr>
-                                    <th>Title</th>
-                                    <th>Description</th>
                                     <th>Image</th>
+                                    <th>Description</th>
+                                    <th>Title</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>

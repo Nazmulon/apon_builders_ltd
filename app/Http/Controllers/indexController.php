@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\EmailNumber;
 use App\AdminSocial;
 use App\Logo;
+use App\Slider;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class indexController extends Controller
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
         $logo = Logo::all();
-        return view('index', compact('emailNumber','social', 'logo'));
+        $sliders = Slider::all();
+        // dd($sliders);
+        return view('index', compact('emailNumber','social', 'logo', 'sliders'));
     }
 
     public function properties()

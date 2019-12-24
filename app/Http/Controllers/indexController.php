@@ -5,6 +5,10 @@ use App\EmailNumber;
 use App\AdminSocial;
 use App\Logo;
 use App\Slider;
+use App\Featurproperty;
+use DB;
+use App\Category;
+use App\Agent;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -16,8 +20,11 @@ class indexController extends Controller
         $social = AdminSocial::get();
         $logo = Logo::all();
         $sliders = Slider::all();
+        $categories = Category::get();
+        $featurproperty = Featurproperty::get();
+        $agents = Agent::get();
         // dd($sliders);
-        return view('index', compact('emailNumber','social', 'logo', 'sliders'));
+        return view('index', compact('emailNumber','social', 'logo', 'sliders', 'categories', 'featurproperty', 'agents'));
     }
 
     public function properties()
@@ -25,7 +32,9 @@ class indexController extends Controller
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
         $logo = Logo::all();
-        return view('layouts.frontend.properties', compact('emailNumber', 'social', 'logo'));
+        $categories = Category::get();
+        $featurproperty = Featurproperty::get();
+        return view('layouts.frontend.properties', compact('emailNumber', 'social', 'logo', 'categories', 'featurproperty'));
     }
 
     public function agents()
@@ -33,7 +42,8 @@ class indexController extends Controller
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
         $logo = Logo::all();
-        return view('layouts.frontend.agents', compact('emailNumber', 'social', 'logo'));
+        $agents = Agent::get();
+        return view('layouts.frontend.agents', compact('emailNumber', 'social', 'logo', 'agents'));
     }
 
     public function about()

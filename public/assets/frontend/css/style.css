@@ -573,6 +573,10 @@ div.absolute{
         margin-left: 70px;
         
     }
+
+    /* div.asocil img{
+        height: 84% !important;
+    } */
     .asocil a{
         padding-left: 18px;
     }
@@ -590,9 +594,9 @@ div.absolute{
     .pon{
         margin-left: 40px;
     }
-    .use{
-        margin-left: 39px;
-  }
+    .use {
+        margin-left: -5px;
+    }
 
   .carousel-caption {
     position: absolute;
@@ -602,8 +606,7 @@ div.absolute{
     z-index: 10;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: 
-#fff;
+    color: #fff;
 }
 .modal-footer{
     padding-right: 114px;

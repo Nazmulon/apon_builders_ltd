@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\AdminSocial' => $baseDir . '/app/AdminSocial.php',
+    'App\\Agent' => $baseDir . '/app/Agent.php',
     'App\\Category' => $baseDir . '/app/Category.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\EmailNumber' => $baseDir . '/app/EmailNumber.php',

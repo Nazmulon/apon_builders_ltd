@@ -16,15 +16,20 @@
 
         </div>
         <div class="col-md-6">
-            <form  action="{{route('featuredproperty.store')}}" method="post" enctype="multipart/form-data">
+            <form  action="{{route('fproperty.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
-                        <select name="category">
-                            <option value="">Select one</option>
-                            <option value="">Select one</option>
+                        <select name="category_id" class="form-control-file border">
+                            <option value="" hidden>Select one</option>
+                            @foreach($categories as $category)
+                              <option value="{{$category->category_id}}">{{$category->category_name}}</option>
+                            @endforeach
                         </select>
-                        <input type="text" name="location" class="form-control-file border" />
+                     </div>
+                     <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" class="form-control-file border" />
                      </div>
                     <div class="form-group">
                         <label for="location">Location</label>

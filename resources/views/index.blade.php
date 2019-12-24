@@ -122,16 +122,7 @@
                 <div class="carousel-caption text-center">
                 <h1>{{$slider->title}}</h1>
                     <p>{{$slider->description}}</p>
-                    <div class="row btn1">
-                        <div class="col-md-6 ">
-                            <a class="btn bg-light btn-outline-success" href="buyer_query.html" role="button" style="color: black; margin-right: 10px; float: right;">Buyer's Query</a>
-                        </div>
-                    </div>
-                    <div class="row btn2">
-                        <div class="col-md-6 ">
-                            <a class="btn btn-success" href="woner_query.html" role="button" style="float: left;">Land Woner's Query</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>  
@@ -317,17 +308,19 @@
     <div class="container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item py-5 active">
+                @foreach($featurproperty as $fproperty)
+                <div class="carousel-item py-5 @if($loop->first) active @endif">
                     <div class="row size">
+                        @foreach ($featurproperty->random(3) as $item)
                         <div class="col-sm-4 col-md-4 slid">
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
-                                    <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
+                                <div class="ps-badge"><span>{{$item->sale_both}}</span></div>
+                                <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$item->image}}" alt=""> </a>
                                     <!-- <div class="sale">Sale</div> -->
-                                    <div class="dolor">$50,000</div>
-                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
+                                    <div class="dolor">${{$item->price}}</div>
+                                    <h5 class="card-title text-center" style="padding-top: 15px;">{{$item->title}}</h5>
+                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i>{{$item->location}}</p>
 
                                     <div class="row">
                                         <div class="col">Area</div>
@@ -336,21 +329,23 @@
                                         <div class="col">Garage</div>
                                     </div>
                                     <div class="row text-center" style="font-size: 10px;">
-                                        <div class="col">3600-sqft</div>
-                                        <div class="col">4</div>
-                                        <div class="col">3</div>
-                                        <div class="col">1</div>
+                                        <div class="col">{{$item->area}}</div>
+                                        <div class="col">{{$item->beds}}</div>
+                                        <div class="col">{{$item->baths}}</div>
+                                        <div class="col">{{$item->garage}}</div>
                                     </div>
-                                    <i class="fas fa-user"></i> Mr Lorem
-                                    <i class="far fa-calendar-alt ele" ></i> 20-11-2019
+                                    <i class="fas fa-user"></i> {{$item->name}}
+                                    <i class="far fa-calendar-alt ele" ></i> {{$item->date}}
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4 slid">
+                        </div> 
+                        @endforeach
+                        
+                        {{-- <div class="col-sm-4 col-md-4 slid">
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""></a>
+                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$fproperty->image}}" alt=""></a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -376,7 +371,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""></a>
+                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$fproperty->image}}" alt=""></a>
                                     <div class="dolor">$50,000</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
@@ -397,10 +392,11 @@
                                     <i class="far fa-calendar-alt ele"></i> 20-11-2019
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
-                <div class="carousel-item py-5">
+                @endforeach
+                {{-- <div class="carousel-item py-5">
                     <div class="row size">
                         <div class="col-sm-4 col-md-4 slid">
                             <div class="card mb-4 shadow-sm">
@@ -482,7 +478,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -499,7 +495,94 @@
     <div class="container" style="margin-top: -90px;">
         <div id="demo1" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item py-5 active">
+                @foreach($featurproperty as $property)
+
+                <div class="carousel-item py-5 @if($loop->first) active @endif">
+                    <div class="row size">
+                        @foreach ($featurproperty->random(3) as $proper)
+                        <div class="col-sm-4 col-md-4 slid">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <div class="ps-badge"><span>{{$proper->sale_both}}</span></div>
+                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$proper->image}}" alt=""> </a>
+                                    <div class="dolor">${{$proper->price}}</div>
+                                    <h5 class="card-title text-center" style="padding-top: 15px;">{{$proper->title}}</h5>
+                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i>{{$proper->location}}</p>
+
+                                    <div class="row">
+                                        <div class="col">Area</div>
+                                        <div class="col">Beds</div>
+                                        <div class="col">Baths</div>
+                                        <div class="col">Garage</div>
+                                    </div>
+                                    <div class="row text-center" style="font-size: 10px;">
+                                        <div class="col">{{$proper->area}}</div>
+                                        <div class="col">{{$proper->beds}}</div>
+                                        <div class="col">{{$proper->baths}}</div>
+                                        <div class="col">{{$proper->garage}}</div>
+                                    </div>
+                                    <i class="fas fa-user"></i> {{$proper->name}}
+                                    <i class="far fa-calendar-alt ele" ></i> {{$proper->date}}
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                        {{-- <div class="col-sm-4 col-md-4 slid">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <div class="ps-badge"><span>Sale</span></div>
+                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <div class="dolor">$50,000</div>
+                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
+                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
+
+                                    <div class="row">
+                                        <div class="col">Area</div>
+                                        <div class="col">Beds</div>
+                                        <div class="col">Baths</div>
+                                        <div class="col">Garage</div>
+                                    </div>
+                                    <div class="row text-center" style="font-size: 10px;">
+                                        <div class="col">3600-sqft</div>
+                                        <div class="col">4</div>
+                                        <div class="col">3</div>
+                                        <div class="col">1</div>
+                                    </div>
+                                    <i class="fas fa-user"></i> Mr Lorem
+                                    <i class="far fa-calendar-alt ele"></i> 20-11-2019
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 slid">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <div class="ps-badge"><span>Sale</span></div>
+                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
+                                    <div class="dolor">$50,000</div>
+                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
+                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
+
+                                    <div class="row">
+                                        <div class="col">Area</div>
+                                        <div class="col">Beds</div>
+                                        <div class="col">Baths</div>
+                                        <div class="col">Garage</div>
+                                    </div>
+                                    <div class="row text-center" style="font-size: 10px;">
+                                        <div class="col">3600-sqft</div>
+                                        <div class="col">4</div>
+                                        <div class="col">3</div>
+                                        <div class="col">1</div>
+                                    </div>
+                                    <i class="fas fa-user"></i> Mr Lorem
+                                    <i class="far fa-calendar-alt ele"></i> 20-11-2019
+                                </div>
+                            </div>
+                        </div> --}}
+                    </div>
+                </div>
+                @endforeach
+                {{-- <div class="carousel-item py-5">
                     <div class="row size">
                         <div class="col-sm-4 col-md-4 slid">
                             <div class="card mb-4 shadow-sm">
@@ -580,89 +663,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item py-5">
-                    <div class="row size">
-                        <div class="col-sm-4 col-md-4 slid">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
-                                    <div class="dolor">$50,000</div>
-                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
-
-                                    <div class="row">
-                                        <div class="col">Area</div>
-                                        <div class="col">Beds</div>
-                                        <div class="col">Baths</div>
-                                        <div class="col">Garage</div>
-                                    </div>
-                                    <div class="row text-center" style="font-size: 10px;">
-                                        <div class="col">3600-sqft</div>
-                                        <div class="col">4</div>
-                                        <div class="col">3</div>
-                                        <div class="col">1</div>
-                                    </div>
-                                    <i class="fas fa-user"></i> Mr Lorem
-                                    <i class="far fa-calendar-alt ele" ></i> 20-11-2019
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4 slid">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
-                                    <div class="dolor">$50,000</div>
-                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
-
-                                    <div class="row">
-                                        <div class="col">Area</div>
-                                        <div class="col">Beds</div>
-                                        <div class="col">Baths</div>
-                                        <div class="col">Garage</div>
-                                    </div>
-                                    <div class="row text-center" style="font-size: 10px;">
-                                        <div class="col">3600-sqft</div>
-                                        <div class="col">4</div>
-                                        <div class="col">3</div>
-                                        <div class="col">1</div>
-                                    </div>
-                                    <i class="fas fa-user"></i> Mr Lorem
-                                    <i class="far fa-calendar-alt ele"></i> 20-11-2019
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4 slid">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
-                                    <div class="dolor">$50,000</div>
-                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
-
-                                    <div class="row">
-                                        <div class="col">Area</div>
-                                        <div class="col">Beds</div>
-                                        <div class="col">Baths</div>
-                                        <div class="col">Garage</div>
-                                    </div>
-                                    <div class="row text-center" style="font-size: 10px;">
-                                        <div class="col">3600-sqft</div>
-                                        <div class="col">4</div>
-                                        <div class="col">3</div>
-                                        <div class="col">1</div>
-                                    </div>
-                                    <i class="fas fa-user"></i> Mr Lorem
-                                    <i class="far fa-calendar-alt ele"></i> 20-11-2019
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> --}}
             </div>
             <a class="carousel-control-prev" href="#demo1" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -714,9 +715,43 @@
                     <!--/.Indicators-->
 
                     <div class="carousel-inner v-2" role="listbox">
-                        <div class="carousel-item py-5 active">
+                        @foreach ($agents as $agent)
+                        <div class="carousel-item py-5 @if($loop->first) active @endif">
                             <div class="row">
+                                @foreach ($agents->random(2) as $agn)
                                 <div class="col-md-4">
+                                    <div class="card mb-2">
+                                    <a href="{{'/single_agents'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/agents/{{$agn->image}}" style="width: 100%; height: 250px;"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 bg-light">
+                                    <h4 class="card-title font-weight-bold text-center" style="padding-top: 5px;">{{$agn->name}}</h4>
+                                    <p class="card-text text-center" style="color:black;">{{$agn->description}}</p>
+                                    <div class="row aicon">
+                                        <ul class="list-group text-left">
+                                            <li class="list-group-item"><i class="fas fa-map-marker-alt"></i>{{$agn->location}} </li>
+                                            <li class="list-group-item"><a href="mailto:"><i class="fas fa-envelope-square"></i>{{$agn->email}}</a></li>
+                                            <li class="list-group-item"><i class="fas fa-phone-alt"></i>{{$agn->number}}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="row asocil">
+                                        <a href="{{$agn->facebook}}">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt="">
+                                        </a>
+                                        <a href="{{$agn->instagram}}">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt="">
+                                        </a>
+                                        <a href="{{$agn->pinterest}}">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt="">
+                                        </a>
+                                        <a href="{{$agn->twitter}}">
+                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                @endforeach
+                                
+                                {{-- <div class="col-md-4">
                                     <div class="card mb-2">
                                         <a href="{{'/single_agents'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/clent/clent1.jpg" style="width: 100%; height: 250px;"></a>
                                     </div>
@@ -745,40 +780,12 @@
                                             <img src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt="">
                                         </a>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card mb-2">
-                                        <a href="{{'/single_agents'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/clent/clent1.jpg" style="width: 100%; height: 250px;"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 bg-light">
-                                    <h4 class="card-title font-weight-bold text-center" style="padding-top: 5px;">Colin Munro</h4>
-                                    <p class="card-text text-center" style="color:black;">Creative Director.</p>
-                                    <div class="row aicon">
-                                        <ul class="list-group text-left">
-                                            <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> 40 New Design Street, Dhaka </li>
-                                            <li class="list-group-item"><a href="mailto:"><i class="fas fa-envelope-square"></i> demo@gmail.com</a></li>
-                                            <li class="list-group-item"><i class="fas fa-phone-alt"></i>+880192-9524168</li>
-                                        </ul>
-                                    </div>
-                                    <div class="row asocil">
-                                        <a href="">
-                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt="">
-                                        </a>
-                                        <a href="">
-                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt="">
-                                        </a>
-                                        <a href="">
-                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt="">
-                                        </a>
-                                        <a href="">
-                                            <img src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
+                                </div> --}}
                             </div>
-                        </div>
-                        <div class="carousel-item py-5">
+                        </div> 
+                        @endforeach
+                        
+                        {{-- <div class="carousel-item py-5">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="card mb-2">
@@ -841,7 +848,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>

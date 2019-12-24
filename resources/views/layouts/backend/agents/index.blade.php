@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Feature Properties</h1>
+                        <h1 class="m-0 text-dark">Our Agents</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -23,45 +23,41 @@
                     <!-- right column -->
                     
                     <div class="col-md-12">
-                    <p><a class="btn btn-primary" href="{{route('fproperty.create')}}">Add Property</a></p>
+                    <p><a class="btn btn-primary" href="{{route('agents.create')}}">Add Agents</a></p>
                             <!-- table start -->
                             <table class="table table-bordered text-center">
                                 <thead>
                                 <tr>
-                                    <th>Title</th>
-                                    <th>Location</th>
-                                    <th>Area</th>
-                                    <th>Beds</th>
-                                    <th>Baths</th>
-                                    <th>Garage</th>
-                                    <th>Price</th>
-                                    <th>Sale_Both</th>
-                                    <th>Name</th>
-                                    <th>Date</th>
                                     <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Location</th>
+                                    <th>Email</th>
+                                    <th> Number</th>
+                                    <th>Facebook</th>
+                                    <th>Instagram</th>
+                                    <th>Pinterest</th>
+                                    <th>Twitter</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                             
-                                @foreach($featurproperty as $property)
+                                @foreach($agents as $agent)
                                   <tr>
-                                  <td>{{$property->title}}</td>
-                                  <td>{{$property->location}}</td>
-                                  <td>{{$property->area}}</td>
-                                  <td>{{$property->beds}}</td>
-                                  <td>{{$property->baths}}</td>
-                                  <td>{{$property->garage}}</td>
-                                  <td>{{$property->price}}</td>
-                                  <td>{{$property->sale_both}}</td>
-                                  <td>{{$property->name}}</td>
-                                  <td>{{$property->date}}</td>
-                                                                        
-                                   <td><img src="{{ URL::to('/') }}/assets/frontend/img/futerproperties/{{ $property->image }}" class="img-thumbnail" width="75" /></td>
-                                   
+                                    <td><img src="{{ URL::to('/') }}/assets/frontend/img/agents/{{ $agent->image }}" class="img-thumbnail" width="75" /></td>
+                                    <td>{{$agent->name}}</td>
+                                    <td>{{$agent->description}}</td>
+                                    <td>{{$agent->location}}</td>
+                                    <td>{{$agent->email}}</td>
+                                    <td>{{$agent->number}}</td>
+                                    <td>{{$agent->facebook}}</td>
+                                    <td>{{$agent->instagram}}</td>
+                                    <td>{{$agent->pinterest}}</td>
+                                    <td>{{$agent->twitter}}</td>
                                    <td>
-                                   <form action="{{ route('fproperty.destroy',$property->id) }}" method="POST">
-                                    <a class="btn btn-info" href="{{route('fproperty.edit', $property->id)}}">Edit</a>
+                                   <form action="{{ route('agents.destroy',$agent->id) }}" method="POST">
+                                    <a class="btn btn-info" href="{{route('agents.edit', $agent->id)}}">Edit</a>
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>
@@ -71,7 +67,7 @@
                                  @endforeach
                                 </tbody>
                             </table>
-                            {!! $featurproperty->links() !!}
+                            {!! $agents->links() !!}
 
 
                         <!-- /.card -->

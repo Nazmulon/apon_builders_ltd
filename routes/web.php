@@ -47,4 +47,7 @@ Route::resource('slider','SliderController');
 Route::resource('category', 'CategoryController');
 
 // ===========================================Featured Properties=======================================
-Route::resource('featuredproperty', 'FeaturPropertyController');
+Route::resource('fproperty', 'FeaturPropertyController');
+
+// ==============================================Agents=================================================
+Route::resource('agents', 'AgentController');

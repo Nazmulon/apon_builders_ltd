@@ -106,12 +106,18 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{'/featureproperties'}}" class="nav-link">
+                                <a href="{{'/fproperty'}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>All Properties</p>
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                    <a href="{{'/agents'}}" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>Agent</p>
+                        </a>
                     </li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
@@ -133,26 +139,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-user"></i>
-                            <p>Agent<i class="fas fa-angle-left right"></i></p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Add Agetn</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>All Agetn</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                    
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon far fa-location-arrow"></i>

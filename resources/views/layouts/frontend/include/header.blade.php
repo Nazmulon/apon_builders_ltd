@@ -49,7 +49,7 @@
     <div class="container">
         <!-- Brand -->
         @foreach($logo as $log)
-        <a class="navbar-brand" href="{{'/'}}"><img src="{{asset('/')}}assets/frontend/img/logo/{{$log->image}}"> </a>
+        <a class="navbar-brand" href="{{'/'}}"><img src="{{ URL::to('/') }}/assets/frontend/img/logo/{{$log->image}}"> </a>
         @endforeach
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">

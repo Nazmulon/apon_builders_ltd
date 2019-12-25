@@ -51,3 +51,6 @@ Route::resource('fproperty', 'FeaturPropertyController');
 
 // ==============================================Agents=================================================
 Route::resource('agents', 'AgentController');
+
+// ============================================Footer==================================================
+Route::resource('footers', 'FooterController');

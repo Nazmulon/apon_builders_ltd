@@ -119,6 +119,12 @@
                             <p>Agent</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{'/footers'}}" class="nav-link">
+                            <i class="nav-icon far fa-location-arrow"></i>
+                            <p>Footer</p>
+                        </a>
+                    </li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-tree"></i>
@@ -140,12 +146,6 @@
                         </ul>
                     </li>
                     
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-location-arrow"></i>
-                            <p>Office Address</p>
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon far fa-image"></i>

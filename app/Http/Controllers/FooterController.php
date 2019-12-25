@@ -26,7 +26,8 @@ class FooterController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.backend.footer.create');
+        
     }
 
     /**
@@ -37,7 +38,25 @@ class FooterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'description' => 'required',
+            'location' => 'required',
+            'email' => 'required',
+            'number' => 'required'
+            
+        ]);
+
+        $form_data = array(
+            'description' =>$request->description,
+            'location' =>$request->location,
+            'email' =>$request->email,
+            'number' =>$request->number,
+            
+        );
+
+        Footer::create($form_data);
+
+        return redirect()->route('footers.index')->with('success', 'Data Added successfully.');
     }
 
     /**
@@ -57,9 +76,10 @@ class FooterController extends Controller
      * @param  \App\Footer  $footer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Footer $footer)
+    public function edit($id)
     {
-        //
+        $footers = Footer::findOrFail($id);
+        return view('layouts.backend.footer.edit', compact('footers'));
     }
 
     /**
@@ -69,9 +89,20 @@ class FooterController extends Controller
      * @param  \App\Footer  $footer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Footer $footer)
+    public function update(Request $request, $id)
     {
-        //
+
+        $form_data = array(
+            'description' =>$request->description,
+            'location' =>$request->location,
+            'email' =>$request->email,
+            'number' =>$request->number,
+            
+        );
+
+        Footer::whereId($id)->update($form_data);
+
+        return redirect()->route('footers.index')->with('success', 'Data Added successfully.');
     }
 
     /**
@@ -80,8 +111,11 @@ class FooterController extends Controller
      * @param  \App\Footer  $footer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Footer $footer)
+    public function destroy($id)
     {
-        //
+        // $footers = Footer::findOrFail($id); 
+        // $footers->delete();
+
+        // return redirect()->route('fproperty.index')->with('success', 'Data is successfully deleted');
     }
 }

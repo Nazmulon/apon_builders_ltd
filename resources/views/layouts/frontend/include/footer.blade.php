@@ -1,23 +1,24 @@
 <footer>
     <div class="container">
+        @foreach($footers as $footer)
         <div class="row">
-            <div class="col">
+            <div class="col-md-3">
                 <h4>Apon Builders LTD</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ea at ab itaque, nesciunt qui natus exercitationem fugit tenetur doloremque!</p>
+                <p>{{$footer->description}}</p>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <h4>Contact Us</h4>
                 <p>
-                    <img src="{{asset('/')}}assets/frontend/img/map/location.jpg" alt="">&nbsp; 40 New Design Street, Dhaka
+                    <img src="{{asset('/')}}assets/frontend/img/map/location.jpg" alt="">&nbsp;{{$footer->location}}
                 </p>
                 <p>
-                    <img src="{{asset('/')}}assets/frontend/img/map/msg.jpg" alt="">&nbsp; Demo@gmail.com
+                    <img src="{{asset('/')}}assets/frontend/img/map/msg.jpg" alt="">&nbsp; {{$footer->email}}
                 </p>
                 <p>
-                    <img src="{{asset('/')}}assets/frontend/img/map/pho.jpg" alt="">&nbsp; +880192-9524168
+                    <img src="{{asset('/')}}assets/frontend/img/map/pho.jpg" alt="">&nbsp; {{$footer->number}}
                 </p>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <h4 class="use">Usefull Links</h4>
                 <ul class="foot">
                     <li><a href="http://" style="color: white;">Home</a></li>
@@ -27,7 +28,7 @@
                     <li><a href="http://" style="color: white;">Contact US</a></li>
                 </ul>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <h4>Subscribe</h4>
                 <form action="" method="POST">
                     <div class="input-group mb-3">
@@ -37,6 +38,7 @@
                 </form>
             </div>
         </div>
+        @endforeach
     </div>
 </footer>
 <div class="row">

@@ -9,6 +9,7 @@ use App\Featurproperty;
 use DB;
 use App\Category;
 use App\Agent;
+use App\Footer;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -23,8 +24,10 @@ class indexController extends Controller
         $categories = Category::get();
         $featurproperty = Featurproperty::get();
         $agents = Agent::get();
+        $footers = Footer::all();
+
         // dd($sliders);
-        return view('index', compact('emailNumber','social', 'logo', 'sliders', 'categories', 'featurproperty', 'agents'));
+        return view('index', compact('emailNumber','social', 'logo', 'sliders', 'categories', 'featurproperty', 'agents', 'footers'));
     }
 
     public function properties()

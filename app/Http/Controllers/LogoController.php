@@ -5,7 +5,7 @@ use App\Logo;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Storage;
 class LogoController extends Controller
 {
     /**
@@ -89,18 +89,24 @@ class LogoController extends Controller
      */
     public function update(Request $request, Logo $logo)
     {
-        if($request->hasFile('image')) {
+        $image_name = $request->hidden_image;
         $image = $request->file('image');
-        $name = str::slug($request->title).'.'.$image->getClientOriginalExtension();
-        $filename = time().'.'.$name;
-        $destinationPath = public_path('assets/frontend/img/logo');
-        $imagePath = $destinationPath. "/".  $filename;
-        // $filename = $image->getClientOriginalName();
-        $image->move($destinationPath, $filename);
-        $logo->image = $request->file('image')->getClientOriginalExtension();
-    }
+        if($image != '')
+        {
+            $request->validate([
+                'image' =>'image'
+            ]);
 
-    $logo->update();
+            $image_name = rand() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('assets/frontend/img/logo'), $image_name);
+        }
+
+        $form_data = array(
+            'image' =>$image_name
+        );
+  
+
+    $logo->update($form_data);
 
     return redirect()->route('logo.index');
         

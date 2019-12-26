@@ -19,7 +19,7 @@ class indexController extends Controller
     {
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
-        $logo = Logo::all();
+        $logo = Logo::get();
         $sliders = Slider::all();
         $categories = Category::get();
         $featurproperty = Featurproperty::get();
@@ -34,51 +34,62 @@ class indexController extends Controller
     {
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
-        $logo = Logo::all();
+        $logo = Logo::get();
         $categories = Category::get();
-        $featurproperty = Featurproperty::get();
-        return view('layouts.frontend.properties', compact('emailNumber', 'social', 'logo', 'categories', 'featurproperty'));
+        $featurproperty = Featurproperty::paginate(9);
+
+        $footers = Footer::all();
+        return view('layouts.frontend.properties', compact('emailNumber', 'social', 'logo', 'categories', 'featurproperty', 'footers'))
+        ->with('i', (request()->input('page', 1) - 1) * 9);
     }
 
     public function agents()
     {
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
-        $logo = Logo::all();
+        $logo = Logo::get();
         $agents = Agent::get();
-        return view('layouts.frontend.agents', compact('emailNumber', 'social', 'logo', 'agents'));
+        $footers = Footer::all();
+        return view('layouts.frontend.our_agents', compact('emailNumber', 'social', 'logo', 'agents', 'footers'));
     }
 
     public function about()
     {
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
-        $logo = Logo::all();
-        return view('layouts.frontend.about', compact('emailNumber', 'social', 'logo'));
+        $logo = Logo::get();
+        $footers = Footer::all();
+        return view('layouts.frontend.about', compact('emailNumber', 'social', 'logo', 'footers'));
     }
 
     public function contact()
     {
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
-        $logo = Logo::all();
-        return view('layouts.frontend.contact',compact('emailNumber', 'social', 'logo'));
+        $logo = Logo::get();
+        $footers = Footer::all();
+        return view('layouts.frontend.contact',compact('emailNumber', 'social', 'logo', 'footers'));
     }
 
-    public function single_properties()
+    public function single_properties($id)
     {
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
-        $logo = Logo::all();
-        return view('layouts.frontend.single_properties', compact('emailNumber', 'social', 'logo'));
+        $logo = Logo::get();
+        $featurproperty = Featurproperty::find($id);
+        // dd($featurproperty);
+        $footers = Footer::all();
+        return view('layouts.frontend.single_properties', compact('emailNumber', 'social', 'logo', 'featurproperty', 'footers'));
     }
 
-    public function single_agents()
+    public function single_agents($id)
     {
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
-        $logo = Logo::all();
-        return view('layouts.frontend.single_agents', compact('emailNumber', 'social', 'logo'));
+        $logo = Logo::get();
+        $agents = Agent::find($id);
+        $footers = Footer::all();
+        return view('layouts.frontend.single_agents', compact('emailNumber', 'social', 'logo', 'footers', 'agents'));
 
     }
 }

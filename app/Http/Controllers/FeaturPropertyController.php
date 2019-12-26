@@ -87,8 +87,9 @@ class FeaturPropertyController extends Controller
      */
     public function show($id)
     {
-        // $featurproperty = Featurproperty::findOrFail($id);
-        // return view('view', compact('featurproperty'));
+
+        $featurproperty = Featurproperty::findOrFail($id);
+        return view('layouts.frontend.single_properties', compact('featurproperty'));
     }
 
     /**

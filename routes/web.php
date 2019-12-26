@@ -17,15 +17,15 @@ Route::get('/', 'indexController@index')->name('index');
 
 Route::get('/properties', 'indexController@properties')->name('properties');
 
-Route::get('/agents', 'indexController@agents')->name('agents');
+Route::get('/our_agents', 'indexController@agents')->name('agents');
 
 Route::get('/about', 'indexController@about')->name('about');
 
 Route::get('/contact', 'indexController@contact')->name('contact');
 
-Route::get('/single_properties', 'indexController@single_properties')->name('single_properties');
+Route::get('/single_properties/{id}', 'indexController@single_properties')->name('single_properties');
 
-Route::get('/single_agents', 'indexController@single_agents')->name('single_agents');
+Route::get('/single_agents/{id}', 'indexController@single_agents')->name('single_agents');
 
 //===============================================Dashboard controller======================================
 Route::get('/dashboard', 'DashboardController@index');

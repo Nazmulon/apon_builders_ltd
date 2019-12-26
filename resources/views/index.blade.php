@@ -128,83 +128,7 @@
         </div>  
         @endforeach
         
-        {{-- <div class="carousel-item">
-            <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_2.jpg" alt="Chicago">
-            <div class="container">
-                <div class="carousel-caption text-center">
-                    <h1>Example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <div class="row btn1">
-                        <div class="col-md-6">
-                            <a data-toggle="modal" data-target="#myModal" class="btn bg-light btn-outline-success" href="#" role="button" style="color: black; margin-right: 10px; float: right;">Buyer's Query</a>
-                        </div>
-                    </div>
-                    <div class="row btn2">
-                        <div class="col-md-6">
-                            <a data-toggle="modal" data-target="#myModal" class="btn btn-success" href="#" role="button" style="float: left;">Land Woner's Query</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_3.jpg" alt="New York" >
-            <div class="container">
-                <div class="carousel-caption text-center">
-                    <h1>Example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <div class="row btn1">
-                        <div class="col-md-6">
-                            <a data-toggle="modal" data-target="#myModal" class="btn bg-light btn-outline-success" href="#" role="button" style="color: black; margin-right: 10px; float: right;">Buyer's Query</a>
-                        </div>
-                    </div>
-                    <div class="row btn2">
-                        <div class="col-md-6">
-                            <a data-toggle="modal" data-target="#myModal" class="btn btn-success" href="#" role="button" style="float: left;">Land Woner's Query</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_4.jpg" alt="New York" >
-            <div class="container">
-                <div class="carousel-caption text-center">
-                    <h1>Example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <div class="row btn1">
-                        <div class="col-md-6">
-                            <a data-toggle="modal" data-target="#myModal" class="btn bg-light btn-outline-success" href="#" role="button" style="color: black; margin-right: 10px; float: right;">Buyer's Query</a>
-                        </div>
-                    </div>
-                    <div class="row btn2">
-                        <div class="col-md-6">
-                            <a data-toggle="modal" data-target="#myModal" class="btn btn-success" href="#" role="button" style="float: left;">Land Woner's Query</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/slider_5.jpg" alt="New York">
-            <div class="container">
-                <div class="carousel-caption text-center">
-                    <h1>Example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <div class="row btn1">
-                        <div class="col-md-6">
-                            <a data-toggle="modal" data-target="#myModal" class="btn bg-light btn-outline-success" href="#" role="button" style="color: black; margin-right: 10px; float: right;">Buyer's Query</a>
-                        </div>
-                    </div>
-                    <div class="row btn2">
-                        <div class="col-md-6">
-                            <a data-toggle="modal" data-target="#myModal" class="btn btn-success" href="#" role="button" style="float: left;">Land Woner's Query</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div> --}}
+       
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
@@ -316,7 +240,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                 <div class="ps-badge"><span>{{$item->sale_both}}</span></div>
-                                <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$item->image}}" alt=""> </a>
+                                <a href="{{route('single_properties',$item->id)}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$item->image}}" alt=""> </a>
                                     <!-- <div class="sale">Sale</div> -->
                                     <div class="dolor">${{$item->price}}</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">{{$item->title}}</h5>
@@ -504,7 +428,7 @@
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                     <div class="ps-badge"><span>{{$proper->sale_both}}</span></div>
-                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$proper->image}}" alt=""> </a>
+                                    <a href="{{route('single_properties',$proper->id)}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$proper->image}}" alt=""> </a>
                                     <div class="dolor">${{$proper->price}}</div>
                                     <h5 class="card-title text-center" style="padding-top: 15px;">{{$proper->title}}</h5>
                                     <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i>{{$proper->location}}</p>
@@ -527,58 +451,6 @@
                             </div>
                         </div>
                         @endforeach
-                        {{-- <div class="col-sm-4 col-md-4 slid">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
-                                    <div class="dolor">$50,000</div>
-                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
-
-                                    <div class="row">
-                                        <div class="col">Area</div>
-                                        <div class="col">Beds</div>
-                                        <div class="col">Baths</div>
-                                        <div class="col">Garage</div>
-                                    </div>
-                                    <div class="row text-center" style="font-size: 10px;">
-                                        <div class="col">3600-sqft</div>
-                                        <div class="col">4</div>
-                                        <div class="col">3</div>
-                                        <div class="col">1</div>
-                                    </div>
-                                    <i class="fas fa-user"></i> Mr Lorem
-                                    <i class="far fa-calendar-alt ele"></i> 20-11-2019
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4 slid">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="{{'/single_properties'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
-                                    <div class="dolor">$50,000</div>
-                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
-
-                                    <div class="row">
-                                        <div class="col">Area</div>
-                                        <div class="col">Beds</div>
-                                        <div class="col">Baths</div>
-                                        <div class="col">Garage</div>
-                                    </div>
-                                    <div class="row text-center" style="font-size: 10px;">
-                                        <div class="col">3600-sqft</div>
-                                        <div class="col">4</div>
-                                        <div class="col">3</div>
-                                        <div class="col">1</div>
-                                    </div>
-                                    <i class="fas fa-user"></i> Mr Lorem
-                                    <i class="far fa-calendar-alt ele"></i> 20-11-2019
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
                 @endforeach
@@ -721,7 +593,7 @@
                                 @foreach ($agents->random(2) as $agn)
                                 <div class="col-md-4">
                                     <div class="card mb-2">
-                                    <a href="{{'/single_agents'}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/agents/{{$agn->image}}" style="width: 100%; height: 250px;"></a>
+                                    <a href="{{route('single_agents',$agn->id)}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/agents/{{$agn->image}}" style="width: 100%; height: 250px;"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-2 bg-light">

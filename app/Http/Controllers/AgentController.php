@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Agent;
+use App\EmailNumber;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -79,8 +80,8 @@ class AgentController extends Controller
      */
     public function show($id)
     {
-        // $featurproperty = Featurproperty::findOrFail($id);
-        // return view('view', compact('featurproperty'));
+        $agents = Agent::findOrFail($id);
+        return view('layouts.frontend.single_agents', compact('agents'));
     }
 
     /**

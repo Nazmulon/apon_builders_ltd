@@ -16,32 +16,32 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="card mb-2">
-                        <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/clent/clent1.jpg" style="width: 100%; height: 350px;">   
+                    <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/agents/{{$agents->image}}" style="width: 100%; height: 350px;">   
                     </div>
                 </div>
                 <div class="col-md-4 bg-light">
                     <div class="card-body">
-                        <h4 class="card-title font-weight-bold text-center">Colin Munro</h4>
-                        <p class="card-text text-center" style="color:black;">Creative Director.</p>
+                        <h4 class="card-title font-weight-bold text-center">{{$agents->name}}</h4>
+                        <p class="card-text text-center" style="color:black;">{{$agents->description}}</p>
                         <div class="row ">
                             <ul>
-                                <li class="list-group-item "><img src="{{asset('/')}}assets/frontend/img/map/location.jpg"> 40 New Design Street, Dhaka </li>
-                                <li class="list-group-item "><a href="mailto:"> <img src="{{asset('/')}}assets/frontend/img/map/msg.jpg"> demo@gmail.com</a></li>
-                                <li class="list-group-item "><img src="{{asset('/')}}assets/frontend/img/map/pho.jpg"> +880192-9524168</li>
+                                <li class="list-group-item "><img src="{{asset('/')}}assets/frontend/img/map/location.jpg"> {{$agents->location}} </li>
+                                <li class="list-group-item "><a href="mailto:"> <img src="{{asset('/')}}assets/frontend/img/map/msg.jpg"> {{$agents->email}}</a></li>
+                                <li class="list-group-item "><img src="{{asset('/')}}assets/frontend/img/map/pho.jpg"> {{$agents->number}}</li>
                             </ul>
                             
                         </div>
                         <div class="row social">
-                            <a href="">
+                            <a href="{{$agents->facebook}}">
                                 <img src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt="">
                             </a>
-                            <a href="">
+                            <a href="{{$agents->instagram}}">
                                 <img src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt="">
                             </a>
-                            <a href="">
+                            <a href="{{$agents->pinterest}}">
                                 <img src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt="">
                             </a>
-                            <a href="">
+                            <a href="{{$agents->twitter}}">
                                 <img src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt="">
                             </a>
                         </div>
@@ -249,7 +249,36 @@
                 </div>
             </div>
             <!-- contact form -->
-            <form action="#" method="POST">
+
+
+                <?php  
+                if(isset($_POST["submit"]))  
+                if($_POST["submit"])  
+                {  
+                    $to = 'nazmulranbagha@gmail.com';
+                    $name = $_POST['name'];
+                    $email = $_POST['email'];
+                    $subject = $_POST['subject'];
+                    $phone = $_POST['phone'];
+                    $message = $_POST['message'];
+                    $headers = "Full Name:"." ". $name."\n"."Email:"." ".$email;
+                    $body = "Subject:"." ".$subject."\r\n ". "Number:"." ".$number."\r\n "."Message:"." ".$message;
+                       
+                    if(mail($to, $headers,$body))
+                    {            
+                    // Paste mail function or whatever else you want to happen here!
+                     echo '<br><p style="color:green">Completed successfully!</p><br>';
+                    }
+ 
+            }  
+            else  
+            {  
+                echo '<div class="alert alert-danger">CAPTHCA is not valid; ignore submission</div>';  
+            }  
+            ?>
+            <form action="{{route('agents.index')}}" method="POST">
+                @csrf
+                @method('POST')
                 <div class="form-row">
                   <div class="col-md-6">
                     <input type="text" class="form-control" id="name" placeholder="Full Name" name="name" required>
@@ -273,7 +302,7 @@
               <textarea class="form-control" name="message" id="message" cols="30" rows="5" placeholder="message..." required></textarea>
           </div>
       </div>
-      <button type="submit" class="btn btn-success mt-4 btn-lg">SEND NOW</button>
+      <button type="submit" name="submit" class="btn btn-success mt-4 btn-lg">SEND NOW</button>
   </form>
   
   

@@ -66,7 +66,7 @@
                     <a class="nav-link" href="{{'/properties'}}">Properties</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{'/agents'}}">Our Agents</a>
+                    <a class="nav-link" href="{{'/our_agents'}}">Our Agents</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{'/about'}}">About Us</a>

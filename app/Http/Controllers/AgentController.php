@@ -16,9 +16,9 @@ class AgentController extends Controller
      */
     public function index()
     {
-        $agents = Agent::paginate(5);
+        $agents = Agent::paginate(10);
         return view('layouts.backend.agents.index', compact('agents'))
-                ->with('i', (request()->input('page', 1) - 1) * 5);
+                ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**

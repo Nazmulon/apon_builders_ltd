@@ -140,162 +140,40 @@
         <div class="container card bg-light">
 
             <div class="carousel-inner">
-                @foreach ($featurproperty as $item)
+                @foreach ($featurproperty as $s_property)
                     <div class="carousel-item py-5 @if($loop->first) active @endif">
                         <div class="row">
-                            @foreach ($featurproperty as $property)
+                        @foreach ($featurproperty as $item)
                             <div class="col-sm-4 col-md-4">
                                 <div class="card mb-4 shadow-sm">
                                     <div class="card-body">
-                                        <div class="ps-badge"><span>{{$property->sale_both}}</span></div>
-                                    <a href="{{route('single_properties',$property->id)}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$property->image}}" > </a>
-                                        <div class="dolor">${{$property->price}}</div>
-                                        <h5 class="card-title text-center" style="padding-top: 15px;"> {{$property->title}}</h5>
-                                        <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> {{$property->location}}</p>
+                                        <div class="ps-badge"><span>{{$featurproperty->sale_both}}</span></div>
+                                    <a href="{{route('single_properties',$featurproperty->id)}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$featurproperty->image}}" > </a>
+                                        <div class="dolor">${{$featurproperty->price}}</div>
+                                        <h5 class="card-title text-center" style="padding-top: 15px;"> {{$featurproperty->title}}</h5>
+                                        <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> {{$featurproperty->location}}</p>
                                         
                                         <div class="row">
                                             <div class="col">Area</div>
                                             <div class="col">Beds</div>
                                             <div class="col">Baths</div>
                                             <div class="col">Garage</div>
-                                            <div class="col">{{$property->area}}</div>
-                                            <div class="col">{{$property->beds}}</div>
-                                            <div class="col">{{$property->baths}}</div>
-                                            <div class="col">{{$property->garage}}</div>
+                                            <div class="col">{{$featurproperty->area}}</div>
+                                            <div class="col">{{$featurproperty->beds}}</div>
+                                            <div class="col">{{$featurproperty->baths}}</div>
+                                            <div class="col">{{$featurproperty->garage}}</div>
                                         </div>
-                                        <i class="fas fa-user"></i> {{$property->name}} 
-                                        <i class="far fa-calendar-alt ele ion" ></i> {{$property->date}}
+                                        <i class="fas fa-user"></i> {{$featurproperty->name}} 
+                                        <i class="far fa-calendar-alt ele ion" ></i> {{$featurproperty->date}}
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
-                            {{-- <div class="col-sm-4 col-md-4">
-                                <div class="card mb-4 shadow-sm">
-                                    <div class="card-body">
-                                        <div class="ps-badge"><span>Sale</span></div>
-                                        <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
-                                        <div class="dolor">$50,000</div>
-                                        <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                        <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
-                                        
-                                        <div class="row">
-                                            <div class="col">Area</div>
-                                            <div class="col">Beds</div>
-                                            <div class="col">Baths</div>
-                                            <div class="col">Garage</div>
-                                            <div class="col">3600</div>
-                                            <div class="col">4</div>
-                                            <div class="col">3</div>
-                                            <div class="col">1</div>
-                                        </div>
-                                        <i class="fas fa-user"></i> Mr Lorem 
-                                        <i class="far fa-calendar-alt ele ion"></i> 20-11-2019
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="card mb-4 shadow-sm">
-                                    <div class="card-body">
-                                        <div class="ps-badge"><span>Sale</span></div>
-                                        <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
-                                        <div class="dolor">$50,000</div>
-                                        <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                        <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
-                                        
-                                        <div class="row">
-                                            <div class="col">Area</div>
-                                            <div class="col">Beds</div>
-                                            <div class="col">Baths</div>
-                                            <div class="col">Garage</div>
-                                            <div class="col">3600</div>
-                                            <div class="col">4</div>
-                                            <div class="col">3</div>
-                                            <div class="col">1</div>
-                                        </div>
-                                        <i class="fas fa-user"></i> Mr Lorem 
-                                        <i class="far fa-calendar-alt ele ion"></i> 20-11-2019
-                                    </div>
-                                </div>
-                            </div>     --}}
+                        @endforeach
+
                         </div>
                     </div>
                 @endforeach
-                {{-- <div class="carousel-item py-5">
-                    <div class="row">
-                        <div class="col-sm-4 col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">  
-                                    <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
-                                    <div class="dolor">$50,000</div>
-                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
-                                    
-                                    <div class="row">
-                                        <div class="col">Area</div>
-                                        <div class="col">Beds</div>
-                                        <div class="col">Baths</div>
-                                        <div class="col">Garage</div>
-                                        <div class="col">3600</div>
-                                        <div class="col">4</div>
-                                        <div class="col">3</div>
-                                        <div class="col">1</div>
-                                    </div>
-                                    <i class="fas fa-user"></i> Mr Lorem 
-                                    <i class="far fa-calendar-alt ele ion" ></i> 20-11-2019
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_property.html"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
-                                    <div class="dolor">$50,000</div>
-                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
-                                    
-                                    <div class="row">
-                                        <div class="col">Area</div>
-                                        <div class="col">Beds</div>
-                                        <div class="col">Baths</div>
-                                        <div class="col">Garage</div>
-                                        <div class="col">3600</div>
-                                        <div class="col">4</div>
-                                        <div class="col">3</div>
-                                        <div class="col">1</div>
-                                    </div>
-                                    <i class="fas fa-user"></i> Mr Lorem 
-                                    <i class="far fa-calendar-alt ele ion"></i> 20-11-2019
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="ps-badge"><span>Sale</span></div>
-                                    <a href="single_properties"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/feture_img/image_4.jpg" alt=""> </a>
-                                    <div class="dolor">$50,000</div>
-                                    <h5 class="card-title text-center" style="padding-top: 15px;">Relaxing Apartment</h5>
-                                    <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> 123 Kathal St. Tampa City</p>
-                                    
-                                    <div class="row">
-                                        <div class="col">Area</div>
-                                        <div class="col">Beds</div>
-                                        <div class="col">Baths</div>
-                                        <div class="col">Garage</div>
-                                        <div class="col">3600</div>
-                                        <div class="col">4</div>
-                                        <div class="col">3</div>
-                                        <div class="col">1</div>
-                                    </div>
-                                    <i class="fas fa-user"></i> Mr Lorem 
-                                    <i class="far fa-calendar-alt ele ion"></i> 20-11-2019
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-                </div> --}}
+                
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

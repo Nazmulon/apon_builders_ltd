@@ -10,9 +10,10 @@ use DB;
 use App\Category;
 use App\Agent;
 use App\Footer;
+use App\Property;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Email;
 class indexController extends Controller
 {
     public function index()
@@ -76,10 +77,15 @@ class indexController extends Controller
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
         $logo = Logo::get();
+        $users = DB::table('featurproperties')->get();
         $featurproperty = Featurproperty::find($id);
+        $property = Property::get();
+        
+        // $featurproperty = Featurproperty::where('id',$id)->get();
+
         // dd($featurproperty);
         $footers = Footer::all();
-        return view('layouts.frontend.single_properties', compact('emailNumber', 'social', 'logo', 'featurproperty', 'footers'));
+        return view('layouts.frontend.single_properties', compact('emailNumber', 'social', 'logo', 'featurproperty', 'footers', 'users', 'property'));
     }
 
     public function single_agents($id)
@@ -89,7 +95,9 @@ class indexController extends Controller
         $logo = Logo::get();
         $agents = Agent::find($id);
         $footers = Footer::all();
-        return view('layouts.frontend.single_agents', compact('emailNumber', 'social', 'logo', 'footers', 'agents'));
+        $users = DB::table('featurproperties')->get();
+
+        return view('layouts.frontend.single_agents', compact('emailNumber', 'social', 'logo', 'footers', 'agents', 'users'));
 
     }
 }

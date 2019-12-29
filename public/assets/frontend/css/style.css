@@ -319,6 +319,10 @@ div.absolute{
       padding-right: 348px;
   }
 
+  .s_agents{
+      margin-left: 74px;
+  }
+
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -336,6 +340,9 @@ div.absolute{
 @media (min-width: 481px) and (max-width: 767px) {
     .trow{
         padding-left: 76px;
+    }
+    .btn-lg {
+        margin-left: 137px;
     }
 
     .log{
@@ -610,6 +617,9 @@ div.absolute{
 }
 .modal-footer{
     padding-right: 114px;
+}
+.s_agents{
+    margin-left: 74px;
 }
 
   
@@ -902,6 +912,9 @@ div.absolute{
 
 .smal{
     margin-top: -18px;
+}
+.s_agents{
+    margin-left: 46px;
 }
 }
 

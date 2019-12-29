@@ -39,10 +39,10 @@
             <a href="{{$icon->twitter}}" target="_blank"> <img class="img-fluid" src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt=""></a>
             @endforeach
         </div>
-        <div class="col-md-4 log">
+        {{-- <div class="col-md-4 log">
             <a data-toggle="modal" data-target="#logModal" href="#" style="color: rgb(68, 129, 6);">Login</a> |
             <a data-toggle="modal" data-target="#regModal" href="#" style="color: rgb(68, 129, 6);">Sign Up</a>
-        </div>
+        </div> --}}
     </div>
 </div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">

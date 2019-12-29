@@ -17,7 +17,34 @@
             </div>
         </div>
         <!-- contact form -->
-        <form action="#" method="POST">
+        <?php  
+        if(isset($_POST["submit"]))  
+        if($_POST["submit"])  
+        {  
+            $to = 'nazmulranbagha@gmail.com';
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $subject = $_POST['subject'];
+            $phone = $_POST['phone'];
+            $message = $_POST['message'];
+            $headers = "Full Name:"." ". $name."\n"."Email:"." ".$email;
+            $body = "Subject:"." ".$subject."\r\n ". "Number:"." ".$phone."\r\n "."Message:"." ".$message;
+               
+            if(mail($to, $headers,$body))
+            {            
+            // Paste mail function or whatever else you want to happen here!
+             echo '<br><p style="color:green">Completed successfully!</p><br>';
+            }
+
+    }  
+    else  
+    {  
+        echo '<div class="alert alert-danger">CAPTHCA is not valid; ignore submission</div>';  
+    }  
+    ?>
+        <form action="{{route('contact')}}" method="POST">
+            @csrf
+            
             <div class="form-row">
               <div class="col-md-6">
                 <input type="text" class="form-control" id="name" placeholder="Full Name" name="name" required>
@@ -41,7 +68,7 @@
           <textarea class="form-control" name="message" id="message" cols="30" rows="5" placeholder="message..." required></textarea>
       </div>
   </div>
-  <button type="submit" class="btn btn-success mt-4 btn-lg">SEND NOW</button>
+  <input type="submit" name="submit" class="btn btn-success mt-4 btn-lg" value="SEND NOW">
 </form>
 
 

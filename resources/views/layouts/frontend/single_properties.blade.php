@@ -27,7 +27,7 @@
             <div class="row text-center">
                 <div class="col-md-4">
                     <ul class="list-group">
-                    <li class="list-group-item"><span class="badge badge-success badge-pill">${{$featurproperty->price}}</span></li>
+                    <li class="list-group-item"><span class="badge badge-success badge-pill">{{$featurproperty->price}}</span></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -48,21 +48,34 @@
                         <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
                             <!-- slides -->
                             <div class="carousel-inner">
-                                <div class="carousel-item active"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_1.jpg"> </div>
-                                <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_2.jpg"> </div>
+                                @foreach ($property as $p_item)
+                                <div class="carousel-item @if($loop->first) active @endif"> 
+                                    <img src="{{asset('/')}}assets/frontend/img/futerproperties/property/{{$p_item->image}}"> 
+                                    </div>
+                                @endforeach
+                                
+
+                                {{-- <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_2.jpg"> </div>
                                 <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_3.jpg"> </div>
                                 <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_4.jpg"> </div>
                                 <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_5.jpg"> </div>
-                                <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_6.jpg"> </div>
+                                <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_6.jpg"> </div> --}}
                             </div> <!-- Left right --> 
                             <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
                             <ol class="carousel-indicators list-inline">
-                                <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_1.jpg" class="img-fluid"> </a> </li>
-                                <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_2.jpg" class="img-fluid"> </a> </li>
+                                @foreach ($property as $item)
+                                <li class="list-inline-item  @if($loop->first) active @endif"> 
+                                    <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> 
+                                        <img src="{{asset('/')}}assets/frontend/img/futerproperties/property/{{$item->image}}" class="img-fluid">
+                                    </a> 
+                                </li>
+                                @endforeach
+                                
+                                {{-- <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_2.jpg" class="img-fluid"> </a> </li>
                                 <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_3.jpg" class="img-fluid"> </a> </li>
                                 <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_4.jpg" class="img-fluid"> </a> </li>
                                 <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="4" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_5.jpg" class="img-fluid"> </a> </li>
-                                <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="5" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_6.jpg" class="img-fluid"> </a> </li>
+                                <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="5" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_6.jpg" class="img-fluid"> </a> </li> --}}
                             </ol>
                         </div>
                     </div>
@@ -75,11 +88,7 @@
             <h2>Description</h2>
             <div class="row">
                 <div class="col-md-12">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, perspiciatis. Numquam in quod dolorem quam quisquam, aperiam, labore aliquid doloribus earum odit, dolor fugit asperiores. Accusantium corporis eum autem hic.
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, perspiciatis. Numquam in quod dolorem quam quisquam, aperiam, labore aliquid doloribus earum odit, dolor fugit asperiores. Accusantium corporis eum autem hic.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id in, vero at fugit sit iste minima itaque aliquid doloremque odio nostrum soluta ullam! Quidem incidunt optio repudiandae nam assumenda.
-                    </p>
+                    <p>{{$featurproperty->description}}</p>
                 </div>
             </div>
 
@@ -103,6 +112,7 @@
                     <ul class="list-group">
                         <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">Telephone</li>
                         <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">Security</li>
+                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">CCTV</li>
                     </ul>
                 </div>
             </div>
@@ -122,10 +132,10 @@
               </thead>
               <tbody>
                 <tr>
-                  <td> {{$featurproperty->area}}</td>
-                  <td> {{$featurproperty->beds}}</td>
-                  <td> {{$featurproperty->baths}}</td>
-                  <td> {{$featurproperty->garage}}</td>
+                  <td>{{$featurproperty->area}}</td>
+                  <td>{{$featurproperty->beds}}</td>
+                  <td>{{$featurproperty->baths}}</td>
+                  <td>{{$featurproperty->garage}}</td>
               </tr>
           </tbody>
       </table>
@@ -140,31 +150,30 @@
         <div class="container card bg-light">
 
             <div class="carousel-inner">
-                @foreach ($featurproperty as $s_property)
+                @foreach ($users as $s_property)
                     <div class="carousel-item py-5 @if($loop->first) active @endif">
                         <div class="row">
-                        @foreach ($featurproperty as $item)
+                        @foreach ($users->random(3) as $s_item)
                             <div class="col-sm-4 col-md-4">
                                 <div class="card mb-4 shadow-sm">
                                     <div class="card-body">
-                                        <div class="ps-badge"><span>{{$featurproperty->sale_both}}</span></div>
-                                    <a href="{{route('single_properties',$featurproperty->id)}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$featurproperty->image}}" > </a>
-                                        <div class="dolor">${{$featurproperty->price}}</div>
-                                        <h5 class="card-title text-center" style="padding-top: 15px;"> {{$featurproperty->title}}</h5>
-                                        <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> {{$featurproperty->location}}</p>
-                                        
+                                        <div class="ps-badge"><span>{{$s_item->sale_both}}</span></div>
+                                    <a href="{{route('single_properties', $s_item->id)}}"><img class="img-fluid" src="{{asset('/')}}assets/frontend/img/futerproperties/{{$s_item->image}}" > </a>
+                                        <div class="dolor">${{$s_item->price}}</div>
+                                        <h5 class="card-title text-center" style="padding-top: 15px;"> {{$s_item->title}}</h5>
+                                        <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> {{$s_item->location}}</p>
                                         <div class="row">
                                             <div class="col">Area</div>
                                             <div class="col">Beds</div>
                                             <div class="col">Baths</div>
                                             <div class="col">Garage</div>
-                                            <div class="col">{{$featurproperty->area}}</div>
-                                            <div class="col">{{$featurproperty->beds}}</div>
-                                            <div class="col">{{$featurproperty->baths}}</div>
-                                            <div class="col">{{$featurproperty->garage}}</div>
+                                            <div class="col">{{$s_item->area}}</div>
+                                            <div class="col">{{$s_item->beds}}</div>
+                                            <div class="col">{{$s_item->baths}}</div>
+                                            <div class="col">{{$s_item->garage}}</div>
                                         </div>
-                                        <i class="fas fa-user"></i> {{$featurproperty->name}} 
-                                        <i class="far fa-calendar-alt ele ion" ></i> {{$featurproperty->date}}
+                                        <i class="fas fa-user"></i> {{$s_item->name}} 
+                                        <i class="far fa-calendar-alt ele ion" ></i> {{$s_item->date}}
                                     </div>
                                 </div>
                             </div>

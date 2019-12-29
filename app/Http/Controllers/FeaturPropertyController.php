@@ -51,6 +51,7 @@ class FeaturPropertyController extends Controller
             'price' => 'required',
             'sale_both' => 'required',
             'name' => 'required',
+            'description' =>'required',
             'date' => 'required',
             'image' => 'required|image|max:2048'
         ]);
@@ -70,6 +71,7 @@ class FeaturPropertyController extends Controller
             'price' =>$request->price,
             'sale_both' =>$request->sale_both,
             'name' =>$request->name,
+            'description' =>$request->description,
             'date' =>$request->date,
             'image' =>$new_name
         );

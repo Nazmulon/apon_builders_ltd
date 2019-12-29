@@ -22,6 +22,8 @@ Route::get('/our_agents', 'indexController@agents')->name('agents');
 Route::get('/about', 'indexController@about')->name('about');
 
 Route::get('/contact', 'indexController@contact')->name('contact');
+Route::post('/contact', 'indexController@contact')->name('contact');
+
 
 Route::get('/single_properties/{id}', 'indexController@single_properties')->name('single_properties');
 
@@ -48,6 +50,8 @@ Route::resource('category', 'CategoryController');
 
 // ===========================================Featured Properties=======================================
 Route::resource('fproperty', 'FeaturPropertyController');
+// ================================Property=============================================================
+Route::resource('property', 'PropertyController');
 
 // ==============================================Agents=================================================
 Route::resource('agents', 'AgentController');

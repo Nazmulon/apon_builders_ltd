@@ -26,6 +26,7 @@ class CreateFeaturpropertiesTable extends Migration
             $table->string('sale_both');
             $table->string('name');
             $table->string('date');
+            $table->text('description');
             $table->string('image');
             $table->timestamps();
         });

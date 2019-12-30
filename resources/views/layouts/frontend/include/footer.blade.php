@@ -3,18 +3,18 @@
         @foreach($footers as $footer)
         <div class="row">
             <div class="col-sm-4 col-md-4">
-                <h4>Apon Builders LTD</h4>
+                <h4 class="use2">Apon Builders LTD</h4>
                 <p>{{$footer->description}}</p>
             </div>
             <div class="col-sm-4 col-md-4">
                 <h4>Contact Us</h4>
-                <p>
+                <p class="fot">
                     <img src="{{asset('/')}}assets/frontend/img/map/location.jpg" alt="">&nbsp;{{$footer->location}}
                 </p>
-                <p>
+                <p class="fot"> 
                     <img src="{{asset('/')}}assets/frontend/img/map/msg.jpg" alt="">&nbsp; {{$footer->email}}
                 </p>
-                <p>
+                <p class="fot">
                     <img src="{{asset('/')}}assets/frontend/img/map/pho.jpg" alt="">&nbsp; {{$footer->number}}
                 </p>
             </div>

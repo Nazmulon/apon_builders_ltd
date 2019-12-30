@@ -823,6 +823,11 @@ div.absolute{
 
     footer h4{
         font-size: 10px;
+        margin-left: 88px;
+    }
+
+    .fot{
+        margin-left: 90px;
     }
 
     .font{
@@ -936,8 +941,15 @@ div.absolute{
         margin-left: 45px;
     }
     .use{
-        margin-left: 39px;
+        margin-left: 94px;
   }
+  .use2{
+    margin-left: 0px;
+  }
+  .foot {
+    list-style-type: none;
+    margin-left: 100px;
+}
 
   .btn-lg{
     margin-left: 27%;

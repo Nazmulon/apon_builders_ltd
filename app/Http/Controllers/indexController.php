@@ -49,7 +49,7 @@ class indexController extends Controller
         $emailNumber = EmailNumber::get();
         $social = AdminSocial::get();
         $logo = Logo::get();
-        $agents = Agent::get();
+        $agents = Agent::paginate(6);
         $footers = Footer::all();
         return view('layouts.frontend.our_agents', compact('emailNumber', 'social', 'logo', 'agents', 'footers'));
     }
@@ -79,7 +79,7 @@ class indexController extends Controller
         $logo = Logo::get();
         $users = DB::table('featurproperties')->get();
         $featurproperty = Featurproperty::find($id);
-        $property = Property::get();
+        $property = Property::where('featurproperties_id',$id)->get();
         
         // $featurproperty = Featurproperty::where('id',$id)->get();
 

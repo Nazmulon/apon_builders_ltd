@@ -14,7 +14,6 @@
         <!-- properties -->
         <div class="container card bg-light">
             <br>
-            @foreach ($agents as $agent)
             <div class="row text-center">
                 @foreach ($agents as $item)
                     <div class="col-md-4">
@@ -33,16 +32,16 @@
                             </ul> 
                         </div>
                         <div class="row asocil">
-                            <a href="">
+                            <a href="{{$item->facebook}}">
                                 <img src="{{asset('/')}}assets/frontend/img/social_icon/facebook.jpg" alt="">
                             </a>
-                            <a href="">
+                            <a href="{{$item->instagram}}">
                                 <img src="{{asset('/')}}assets/frontend/img/social_icon/camera.jpg" alt="">
                             </a>
-                            <a href="">
+                            <a href="{{$item->pinterest}}">
                                 <img src="{{asset('/')}}assets/frontend/img/social_icon/instagram.jpg" alt="">
                             </a>
-                            <a href="">
+                            <a href="{{$item->twitter}}">
                                 <img src="{{asset('/')}}assets/frontend/img/social_icon/twitter.jpg" alt="">
                             </a>
                         </div>
@@ -50,11 +49,9 @@
                 @endforeach
                 
             </div>
-            @endforeach
-
-
+            
         </div>
-
+        {!! $agents->links() !!}
     </div>
   
 

@@ -6,6 +6,9 @@ use App\Property;
 use App\Featurproperty;
 use App\Category;
 use DB;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Str;
+use Image;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -40,32 +43,47 @@ class PropertyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
- 
+    { 
+
+
+
+        // if(count($request->image)>0){
+        //     foreach ($request->image as $image) {
+        //       if ($request->hasFile('image')) {
+        //         //insert that image
+        //         // $image = $request->file('product_image');
+        //         $img = time() . '.'. $image->getClientOriginalExtension();
+        //         $image->move(public_path('assets/frontend/img/futerproperties/property/'),$img);
+        //         $product_image = new Property;
+        //         $product_image->featurproperties_id = $request->featurproperties_id;
+        //         $product_image->image = $img;
+        //         $product_image->save();
+        //       }
+        //     }
+        //   }
+        
 
         //  return $request;
-    $image_code = '';
-    $featurproperties_id=$request->featurproperties_id;
-    $images = $request->file('image');
-    $img='';
-    foreach($images as $image)
-    {
-     $new_name = rand() . '.' . $image->getClientOriginalExtension();
-     $image->move(public_path('assets/frontend/img/futerproperties/property'), $new_name);
-    //  $img=($image,$new_name);
-    }
+            $image = '';
+            $featurproperties_id=$request->featurproperties_id;
+            $images = $request->file('image');
+            $count = 1;
+            if(count($request->image)>0){
+            foreach($request->image as $image)
+            {
+            $new_name = $count.''.time() . "." . $image->getClientOriginalExtension();
+            $image->move(public_path('assets/frontend/img/futerproperties/property/'),$new_name);
+            $count++;
+            $product_image = new Property;
+            $product_image->featurproperties_id = $request->featurproperties_id;
+            $product_image->image = $new_name;
+            $product_image->save();
+            }
+        }
+            
 
-    $output = array(
-     'featurproperties_id'  => $featurproperties_id,
-     'image'   => $image
-    );
-
-   
-    /*Insert your data*/
-    Property::create($output);
-
-    return redirect()->route('property.create');
-    }
+            return redirect()->route('property.create');
+            }
 
     /**
      * Display the specified resource.

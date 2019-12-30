@@ -56,7 +56,7 @@
         <!--similar properties -->
 
         <div class="container">
-            <h2>Featured Properties</h2>
+            <h2 class="fatuer_w">Featured Properties</h2>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <div class="container card bg-light">
                     <div class="carousel-inner">

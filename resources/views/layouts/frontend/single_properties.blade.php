@@ -53,29 +53,16 @@
                                     <img src="{{asset('/')}}assets/frontend/img/futerproperties/property/{{$p_item->image}}"> 
                                     </div>
                                 @endforeach
-                                
-
-                                {{-- <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_2.jpg"> </div>
-                                <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_3.jpg"> </div>
-                                <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_4.jpg"> </div>
-                                <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_5.jpg"> </div>
-                                <div class="carousel-item"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_6.jpg"> </div> --}}
                             </div> <!-- Left right --> 
                             <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
                             <ol class="carousel-indicators list-inline">
-                                @foreach ($property as $item)
+                                @foreach ($property as $key => $item)
                                 <li class="list-inline-item  @if($loop->first) active @endif"> 
-                                    <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> 
+                                <a id="carousel-selector-0" class="selected" data-slide-to="{{$key}}" data-target="#custCarousel"> 
                                         <img src="{{asset('/')}}assets/frontend/img/futerproperties/property/{{$item->image}}" class="img-fluid">
                                     </a> 
                                 </li>
                                 @endforeach
-                                
-                                {{-- <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_2.jpg" class="img-fluid"> </a> </li>
-                                <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_3.jpg" class="img-fluid"> </a> </li>
-                                <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_4.jpg" class="img-fluid"> </a> </li>
-                                <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="4" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_5.jpg" class="img-fluid"> </a> </li>
-                                <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="5" data-target="#custCarousel"> <img src="{{asset('/')}}assets/frontend/img/single_property/single_property_6.jpg" class="img-fluid"> </a> </li> --}}
                             </ol>
                         </div>
                     </div>

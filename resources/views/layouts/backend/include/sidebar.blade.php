@@ -151,6 +151,12 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                    <a href="{{route('property.create')}}" class="nav-link">
+                            <i class="nav-icon far fa-image"></i>
+                            <p>Add Property Images</p>
+                        </a>
+                    </li>
                     <li class="nav-item has-treeview">
                     <a href="{{'/agents'}}" class="nav-link">
                             <i class="nav-icon fas fa-user"></i>
@@ -162,81 +168,13 @@
                             <i class="nav-icon far fa-location-arrow"></i>
                             <p>Footer</p>
                         </a>
-                    </li>
+                    </li>              
                    
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-tree"></i>
-                            <p>Social Link<i class="fas fa-angle-left right"></i></p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Add Link</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>All Link</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-image"></i>
-                            <p>Apon Builders LTD</p>
-                        </a>
-                    </li>
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
                             <i class="nav-icon far fa-envelope"></i>
-                            <p>Contact Us</p>
+                            <p>About Us</p>
                         </a>
-                    </li>
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Single Property
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="pages/examples/invoice.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Add Slider</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/profile.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Description</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/e_commerce.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Features</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/projects.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Floor Plans</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/examples/project_add.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Similar Properties</p>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                 </ul>
             </nav>

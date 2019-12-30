@@ -23,15 +23,15 @@
                         <select name="featurproperties_id" class="form-control-file border">
                             <option value="" hidden>Select one</option>
                             @foreach($featurproperty as $category)
-                              <option value="{{$category->id}}">{{$category->category_id}}</option>
+                              <option value="{{$category->id}}">{{$category->id}}</option>
                             @endforeach
                         </select>
                      </div>
                     <div class="form-group">
-                        <label for="file">Add Image:</label>
-                        <input type="file" name="image[]" id="file" accept="image/*" multiple />
+                        
+                        <input type="file" name="image[]" accept="image.*/" multiple="multiple" />
                        
-                        <br>
+                        <br><br>
                         <input type="submit" name="submit" class="btn btn-primary" value="SAVE">
 
                     </div>

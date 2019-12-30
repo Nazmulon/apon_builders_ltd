@@ -2,11 +2,11 @@
     <div class="container">
         @foreach($footers as $footer)
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-sm-4 col-md-4">
                 <h4>Apon Builders LTD</h4>
                 <p>{{$footer->description}}</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-4 col-md-4">
                 <h4>Contact Us</h4>
                 <p>
                     <img src="{{asset('/')}}assets/frontend/img/map/location.jpg" alt="">&nbsp;{{$footer->location}}
@@ -18,7 +18,7 @@
                     <img src="{{asset('/')}}assets/frontend/img/map/pho.jpg" alt="">&nbsp; {{$footer->number}}
                 </p>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-4 col-md-4">
                 <h4 class="use">Usefull Links</h4>
                 <ul class="foot">
                     <li><a href="http://" style="color: white;">Home</a></li>
@@ -28,7 +28,7 @@
                     <li><a href="http://" style="color: white;">Contact US</a></li>
                 </ul>
             </div>
-            <div class="col-md-3">
+            {{-- <div class="col-sm-3 col-md-3">
                 <h4>Subscribe</h4>
                 <form action="" method="POST">
                     <div class="input-group mb-3">
@@ -36,7 +36,7 @@
                         <input class=" btn-success" type="submit" name="submit" value="send" style="padding-bottom: 5px; padding-top: 6px;">
                     </div>
                 </form>
-            </div>
+            </div> --}}
         </div>
         @endforeach
     </div>

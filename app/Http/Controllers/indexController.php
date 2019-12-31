@@ -82,12 +82,12 @@ class indexController extends Controller
         $featurproperty = Featurproperty::find($id);
         $features = Feature::where('featurproperties_id', $id)->get();
         $property = Property::where('featurproperties_id',$id)->get();
-        
+        $categories = Category::get();
         // $featurproperty = Featurproperty::where('id',$id)->get();
 
         // dd($featurproperty);
         $footers = Footer::all();
-        return view('layouts.frontend.single_properties', compact('emailNumber', 'social', 'logo', 'featurproperty', 'footers', 'users', 'property', 'features'));
+        return view('layouts.frontend.single_properties', compact('emailNumber', 'social', 'logo', 'featurproperty', 'footers', 'users', 'property', 'features', 'categories'));
     }
 
     public function single_agents($id)

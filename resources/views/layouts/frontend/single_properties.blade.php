@@ -27,7 +27,7 @@
             <div class="row text-center">
                 <div class="col-md-4">
                     <ul class="list-group">
-                    <li class="list-group-item"><span class="badge badge-success badge-pill">{{$featurproperty->price}}</span></li>
+                    <li class="list-group-item"><span class="badge badge-success badge-pill">TK.{{$featurproperty->price}}</span></li>
                     </ul>
                 </div>
                 <div class="col-md-4">

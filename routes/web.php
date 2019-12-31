@@ -56,6 +56,8 @@ Route::resource('property', 'PropertyController');
 Route::resource('feature', 'FeatureController');
 // ==============================================Agents=================================================
 Route::resource('agents', 'AgentController');
-
 // ============================================Footer==================================================
 Route::resource('footers', 'FooterController');
+// =============================================Search==================================================
+// Route::get('search/servicecity', 'SearchController@index')->name('searchServiceCityForm');
+Route::get('search/result', 'SearchController@process')->name('search.result');

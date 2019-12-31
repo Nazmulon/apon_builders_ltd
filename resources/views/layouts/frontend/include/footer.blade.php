@@ -41,11 +41,14 @@
         @endforeach
     </div>
 </footer>
-<div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-12">
-        <h6>&copy; Copyright 2019 All rights reserved - Design By Infobizsoft</h6>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <h6>&copy; Copyright 2019 All rights reserved - Design By Infobizsoft</h6>
+        </div>
     </div>
-</div>
+
+
 
 </div>
 <!-- end featured properties -->

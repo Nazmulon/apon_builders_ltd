@@ -81,27 +81,31 @@
 
             <h2>Features</h2>
             <div class="row">
+                @foreach ($features as $item)
+                    
                 <div class="col-md-4">
                     <ul class="list-group">
-                        <li class="list-group-item "><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">Air Conditioning</li>
-                        <li class="list-group-item"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">Parking</li>
-                        <li class="list-group-item "><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">Gym</li>
+                    <li class="list-group-item "><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">{{$item->featuer_1}}</li>
+                        <li class="list-group-item"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">{{$item->featuer_2}}</li>
+                        <li class="list-group-item "><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">{{$item->featuer_3}}</li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-group">
-                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">Wifi</li>
-                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">Garage</li>
-                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">Electric</li>
+                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">{{$item->featuer_4}}</li>
+                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">{{$item->featuer_5}}</li>
+                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">{{$item->featuer_6}}</li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-group">
-                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">Telephone</li>
-                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">Security</li>
-                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">CCTV</li>
+                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">{{$item->featuer_7}}</li>
+                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">{{$item->featuer_8}}</li>
+                        <li class="list-group-item d-flex"><img src="{{asset('/')}}assets/frontend/img/properties/checkmark.jpg">{{$item->featuer_9}}</li>
                     </ul>
                 </div>
+                @endforeach
+
             </div>
         </div>
         <br>

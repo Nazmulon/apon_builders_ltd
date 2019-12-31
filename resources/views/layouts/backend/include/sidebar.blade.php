@@ -157,6 +157,12 @@
                             <p>Add Property Images</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{route('feature.index')}}" class="nav-link">
+                            <i class="nav-icon far fa-location-arrow"></i>
+                            <p>Featuers</p>
+                        </a>
+                    </li>
                     <li class="nav-item has-treeview">
                     <a href="{{'/agents'}}" class="nav-link">
                             <i class="nav-icon fas fa-user"></i>

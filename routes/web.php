@@ -52,7 +52,8 @@ Route::resource('category', 'CategoryController');
 Route::resource('fproperty', 'FeaturPropertyController');
 // ================================Property=============================================================
 Route::resource('property', 'PropertyController');
-
+// =======================================Featuer=======================================================
+Route::resource('feature', 'FeatureController');
 // ==============================================Agents=================================================
 Route::resource('agents', 'AgentController');
 
